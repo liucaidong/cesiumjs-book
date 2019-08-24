@@ -8,5 +8,5 @@ CesiumJS是一个用于世界级3D地球仪和地图的开源JavaScript库。我
 * 三维模型（Entity&Primitive）
 * 3DTiles
 
-
+[github demo](https://github.com/yangjianzhi-zl/Cesiumjs-demo)
 
