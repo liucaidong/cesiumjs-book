@@ -25,6 +25,31 @@ viewer.entities.add({
 
 简明使用
 
-1. 
+1. 声明 new Cesium.GeometryInstance\( { geometry : new Cesium.RectangleGeometry } \)
+
+2. 添加viewer.scene.primitives.add
+
+**例子**
+
+```
+//声明对象实例
+var instance = new Cesium.GeometryInstance({
+    geometry: new Cesium.RectangleGeometry({
+        rectangle: Cesium.Rectangle.fromDegrees(105.20, 30.55, 106.20, 31.55),
+        vertexFormat:Cesium.EllipsoidSurfaceAppearance.VERTEXT_FORMAT
+    }),
+    id: 'rectangle-1',
+});
+//将实例添加到地图
+viewer.scene.primitives.add(new Cesium.Primitive({
+    geometryInstances: instance,
+    appearance: new Cesium.EllipsoidSurfaceAppearance({
+        material:Cesium.Material.fromType('Stripe')
+    })
+}));
+```
+
+添加多个则 perimitives.add -&gt; geometryInstances : \[\]\(存放实例组\)
+
 
 
