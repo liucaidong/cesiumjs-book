@@ -4,7 +4,7 @@
 
 简明使用
 
-* viewer.entities.add
+1. viewer.entities.add
 
 **例子**
 
@@ -25,7 +25,6 @@ viewer.entities.add({
 
 简明使用
 
-
-
+1. 
 
 
