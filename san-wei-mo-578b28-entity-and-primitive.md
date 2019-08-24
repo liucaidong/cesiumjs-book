@@ -60,5 +60,21 @@ viewer.scene.primitives.add(new Cesium.Primitive({
 
 地图事件使用处理程序：new Cesium.ScreenSpaceEventHandler\(\);
 
+使用：handler.setInputAction
+
+**例子**
+
+```
+//声明处理程序
+var handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
+//设置单击事件的处理句柄
+handler.setInputAction(function (movement) {
+    var pick = viewer.scene.pick(movement.position);
+    if (Cesium.defined(pick) && (pick.id === 'rectangle-1')) {
+        alert('矩形被选取');
+    }
+}, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+```
+
 
 
