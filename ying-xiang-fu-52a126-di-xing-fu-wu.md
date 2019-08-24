@@ -37,7 +37,12 @@ var viewer = new Cesium.Viewer('cesiumContainer',{
 
 #### \#地形服务
 
+简明使用
 
+1. 声明Cesium.createWorldTerrain，newCesium.CesiumTerrainProvider
+2. 使用viewer.terrainProvider = 
+
+**例子**
 
 ```
 //在线地形
@@ -47,6 +52,40 @@ var worldTerrain = Cesium.createWorldTerrain({
 });
 //使用
 viewer.terrainProvider = ellipsoidProvider;//地形数据源
+```
+
+#### \#图层
+
+打开图层选择器
+
+```
+{
+     baseLayerPicker: false, //是否显示图层选择控件
+}
+```
+
+选择默认图层
+
+```
+viewer.baseLayerPicker.viewModel.selectedImagery = viewer.baseLayerPicker.viewModel.imageryProviderViewModels[6];
+```
+
+自定义图层
+
+```
+//1new Cesium.ProviderViewModel声明图层模型
+var providerViewModels = [];
+var esriMapModel = new Cesium.ProviderViewModel({
+    name: 'esri Maps',
+    iconUrl: Cesium.buildModuleUrl('./Widgets/Images/ImageryProviders/esriWorldImagery.png'),
+    tooltip: 'ArcGIS 地图服务 \nhttps://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer',
+    creationFunction: function () {
+        return esriMap;
+    }
+});
+providerViewModels.push(esriMapModel);
+//2 使用自定义图层选择器
+{imageryProviderViewModels: providerViewModels, }
 ```
 
 
