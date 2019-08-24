@@ -29,6 +29,11 @@ viewer.entities.add({
 
 2. 添加viewer.scene.primitives.add
 
+外观设置
+
+1. 声明new Cesium.PerInstanceColorAppearance
+2. 使用{appearance ： }
+
 **例子**
 
 ```
@@ -43,7 +48,7 @@ var instance = new Cesium.GeometryInstance({
 //将实例添加到地图
 viewer.scene.primitives.add(new Cesium.Primitive({
     geometryInstances: instance,
-    appearance: new Cesium.EllipsoidSurfaceAppearance({
+    appearance: new Cesium.EllipsoidSurfaceAppearance({ //外观设置
         material:Cesium.Material.fromType('Stripe')
     })
 }));
