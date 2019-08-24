@@ -56,5 +56,9 @@ viewer.scene.primitives.add(new Cesium.Primitive({
 
 添加多个则 perimitives.add -&gt; geometryInstances : \[\]\(存放实例组\)
 
+#### \#事件
+
+地图事件使用处理程序：new Cesium.ScreenSpaceEventHandler\(\);
+
 
 
