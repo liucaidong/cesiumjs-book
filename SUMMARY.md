@@ -7,5 +7,4 @@
   * [三维模型\(Entity&Primitive\)](san-wei-mo-578b28-entity-and-primitive.md)
 * [坑](keng.md)
 * [实例](shi-li.md)
-* [持续更新](chapter1.md)
 
