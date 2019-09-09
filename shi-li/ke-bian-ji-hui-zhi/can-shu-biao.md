@@ -16,7 +16,8 @@
 | defaultBillboard |  |
 | dragBillboard |  |
 | dragHalfBillboard |  |
-|  |  |
+| \_scene |  |
+| \_surfaces | 表面 |
 
 内部对象
 
@@ -28,7 +29,7 @@
 
 | setListener |  |
 | :--- | :--- |
-| enhanceWithListeners |  |
+| enhanceWithListeners | 增强监听事件 |
 
 ---
 

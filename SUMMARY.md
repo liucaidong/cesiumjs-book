@@ -22,6 +22,7 @@
     * [util](shi-li/shi-xian-xian/util.md)
   * [可编辑绘制](shi-li/ke-bian-ji-hui-zhi.md)
     * [参数表](shi-li/ke-bian-ji-hui-zhi/can-shu-biao.md)
+    * [initialiseHandlers](shi-li/ke-bian-ji-hui-zhi/initialisehandlers.md)
     * [ChangeblePrimitive](shi-li/ke-bian-ji-hui-zhi/changebleprimitive.md)
     * [prototype-enhancePrimitives](shi-li/ke-bian-ji-hui-zhi/prototype-enhanceprimitives.md)
     * [changeablePrimitiveTool](shi-li/ke-bian-ji-hui-zhi/changeableprimitivetool.md)
@@ -33,6 +34,4 @@
 * [随笔](sui-bi.md)
   * [prototype-new](sui-bi/prototype-new.md)
   * [js](js.md)
-
-
 

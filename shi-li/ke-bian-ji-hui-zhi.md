@@ -37,60 +37,8 @@ function drawLine() {
 
 ```
 var ChangeablePrimitiveTool = (function () {
-    //变量
-    var isCreat = false;
-    var ellipsoid = Cesium.Ellipsoid.WGS84;
-    var materialLine = Cesium.Material.fromType(Cesium.Material.ColorType);
-    materialLine.uniforms.color = new Cesium.Color(1.0, 1.0, 0.0, 0.5);
-
-    var materialSurface = Cesium.Material.fromType(Cesium.Material.ColorType);
-    materialSurface.uniforms.color = new Cesium.Color(0.0, 1.0, 1.0, 0.5);
-
-    //属性
-    var defaultShapeOptions = {
-        ellipsoid: Cesium.Ellipsoid.WGS84,
-        textureRotationAngle: 0.0,
-        height: 0.0,
-        asynchronous: true,
-        show: true,
-        debugShowBoundingVolume: false
-    };
-    var defaultSurfaceOptions = copyOptions(defaultShapeOptions, {
-        appearance: new Cesium.EllipsoidSurfaceAppearance({
-            aboveGround: false
-        }),
-        material: materialSurface,
-        granularity: Math.PI / 180.0
-    });
-
-    var defaultPolylineOptions = copyOptions(defaultShapeOptions, {
-        width: 5,
-        geodesic: true,
-        granularity: 10000,
-        appearance: new Cesium.PolylineMaterialAppearance({
-            aboveGround: false
-        }),
-        material: materialLine
-    });
-    var defaultPolygonOptions = copyOptions(defaultSurfaceOptions, {}); 
-    //编辑状态节点图标
-    var defaultBillboard = {
-        iconUrl: "./sampledata/images/dragIcon.png",
-        shiftX: 0,
-        shiftY: 0
-    };
-    var dragBillboard = {
-        iconUrl: "./sampledata/images/dragIcon.png",
-        shiftX: 0,
-        shiftY: 0
-    };
-    var dragHalfBillboard = {
-        iconUrl: "./sampledata/images/dragIconLight.png",
-        shiftX: 0,
-        shiftY: 0
-    };
-
-    var ChangeablePrimitive = ()//子目录下 可变实体
+    //声明变量等
+    代码放到下面
 
     /**
      * _构造函数
@@ -102,8 +50,10 @@ var ChangeablePrimitiveTool = (function () {
         //this._tooltip = createTooltip(viewer.cesiumWidget.container);
         TooltipDiv.initTool(viewer.cesiumWidget.container);
         this._surfaces = [];
-
+        
+        //初始化
         this.initialiseHandlers();
+        //增强监听
         this.enhancePrimitives();
         isCreat = true;
     }
@@ -132,58 +82,67 @@ var ChangeablePrimitiveTool = (function () {
         });
     };
 
-     _.prototype.initialiseHandlers = function () {
-        var scene = this._scene;
-        var _self = this;
-        // scene events
-        var handler = new Cesium.ScreenSpaceEventHandler(scene.canvas);
-        //执行方法
-        function callPrimitiveCallback(name, position) {
-            if (_self._handlersMuted == true) return;
-            var pickedObject = scene.pick(position);
-            if (pickedObject && pickedObject.primitive && pickedObject.primitive[name]) {
-                pickedObject.primitive[name](position);
-            }
-        }
-        handler.setInputAction(
-            function (movement) {
-                callPrimitiveCallback('leftClick', movement.position);
-            }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
-        handler.setInputAction(
-            function (movement) {
-                callPrimitiveCallback('leftDoubleClick', movement.position);
-            }, Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK);
-        var mouseOutObject;
-        handler.setInputAction(
-            function (movement) {
-                if (_self._handlersMuted == true) return;
-                var pickedObject = scene.pick(movement.endPosition);
-                if (mouseOutObject && (!pickedObject || mouseOutObject != pickedObject.primitive)) {
-                    !(mouseOutObject.isDestroyed && mouseOutObject.isDestroyed()) && mouseOutObject.mouseOut(movement.endPosition);
-                    mouseOutObject = null;
-                }
-                if (pickedObject && pickedObject.primitive) {
-                    pickedObject = pickedObject.primitive;
-                    if (pickedObject.mouseOut) {
-                        mouseOutObject = pickedObject;
-                    }
-                    if (pickedObject.mouseMove) {
-                        pickedObject.mouseMove(movement.endPosition);
-                    }
-                }
-            }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
-        handler.setInputAction(
-            function (movement) {
-                callPrimitiveCallback('leftUp', movement.position);
-            }, Cesium.ScreenSpaceEventType.LEFT_UP);
-        handler.setInputAction(
-            function (movement) {
-                callPrimitiveCallback('leftDown', movement.position);
-            }, Cesium.ScreenSpaceEventType.LEFT_DOWN);
-    };
-    
     return _;
 }());
+```
+
+声明变量
+
+```
+//变量
+var isCreat = false;
+var ellipsoid = Cesium.Ellipsoid.WGS84;
+var materialLine = Cesium.Material.fromType(Cesium.Material.ColorType);
+materialLine.uniforms.color = new Cesium.Color(1.0, 1.0, 0.0, 0.5);
+
+var materialSurface = Cesium.Material.fromType(Cesium.Material.ColorType);
+materialSurface.uniforms.color = new Cesium.Color(0.0, 1.0, 1.0, 0.5);
+
+//属性
+var defaultShapeOptions = {
+    ellipsoid: Cesium.Ellipsoid.WGS84,
+    textureRotationAngle: 0.0,
+    height: 0.0,
+    asynchronous: true,
+    show: true,
+    debugShowBoundingVolume: false
+};
+var defaultSurfaceOptions = copyOptions(defaultShapeOptions, {
+    appearance: new Cesium.EllipsoidSurfaceAppearance({
+        aboveGround: false
+    }),
+    material: materialSurface,
+    granularity: Math.PI / 180.0
+});
+
+var defaultPolylineOptions = copyOptions(defaultShapeOptions, {
+    width: 5,
+    geodesic: true,
+    granularity: 10000,
+    appearance: new Cesium.PolylineMaterialAppearance({
+        aboveGround: false
+    }),
+    material: materialLine
+});
+var defaultPolygonOptions = copyOptions(defaultSurfaceOptions, {}); 
+//编辑状态节点图标
+var defaultBillboard = {
+    iconUrl: "./sampledata/images/dragIcon.png",
+    shiftX: 0,
+    shiftY: 0
+};
+var dragBillboard = {
+    iconUrl: "./sampledata/images/dragIcon.png",
+    shiftX: 0,
+    shiftY: 0
+};
+var dragHalfBillboard = {
+    iconUrl: "./sampledata/images/dragIconLight.png",
+    shiftX: 0,
+    shiftY: 0
+};
+
+var ChangeablePrimitive = ()//子目录下 可变实体
 ```
 
 
