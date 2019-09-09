@@ -1,6 +1,6 @@
 #### 实现线中的一些辅助方法
 
-cloneObjDraw
+##### cloneObjDraw
 
 克隆对象
 
@@ -22,7 +22,7 @@ function cloneObjDraw(from, to) {
 }
 ```
 
-copyOptionsDraw
+##### copyOptionsDraw
 
 返回defaultOptions和options的合并对象
 
@@ -38,7 +38,7 @@ function copyOptionsDraw(options, defaultOptions) {
 }
 ```
 
-fillOptionsDraw
+##### fillOptionsDraw
 
 克隆defaultOptions到options中
 
