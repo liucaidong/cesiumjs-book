@@ -1,6 +1,6 @@
 #### enhancePrimitives
 
-```
+```js
 _.prototype.enhancePrimitives = function () {
     var changeablePrimitiveTool = this;
 
@@ -76,7 +76,7 @@ _.prototype.enhancePrimitives = function () {
             }
         } 
     }
-    
+
     function setEditMode(editMode) {
         if (this._editMode == editMode) {
             return;
@@ -139,11 +139,13 @@ _.prototype.enhancePrimitives = function () {
                 };
                 markers.addBillboards(_self.positions, handleMarkerChanges);
                 this._markers = markers;
+            
             }
         }
     }
+    
+    
 }
 ```
-
 
 
