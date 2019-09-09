@@ -3,6 +3,7 @@
 ```
 //声明几何体实例
 var instance = new Cesium.GeometryInstance({
+  //几何体
   geometry : new Cesium.EllipseGeometry({
       center : Cesium.Cartesian3.fromDegrees(-100.0, 20.0),
       semiMinorAxis : 500000.0,
