@@ -16,6 +16,7 @@
     * [PolylinePrimitive](shi-li/shi-xian-xian/polylineprimitive.md)
     * [PolygonPrimtive](shi-li/shi-xian-xian/polygonprimtive.md)
     * [util](shi-li/shi-xian-xian/util.md)
+  * [提示框](shi-li/ti-shi-kuang.md)
 * [项目遇到的坑](keng.md)
 * [随笔](sui-bi.md)
   * [prototype-new](sui-bi/prototype-new.md)
