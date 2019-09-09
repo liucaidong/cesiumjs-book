@@ -10,7 +10,7 @@ function drawLine() {
     positionWord.push(Cesium.Cartesian3.fromDegrees(110.20, 34.55, 0));
     positionWord.push(Cesium.Cartesian3.fromDegrees(115.20, 34.55, 0));
     positionWord.push(Cesium.Cartesian3.fromDegrees(115.20, 39.55, 0));
-
+    //生成线
     var polyline = new ChangeablePrimitiveTool.PolylinePrimitive({
         positions: positionWord,
         width: 5,
@@ -20,6 +20,7 @@ function drawLine() {
     }, viewer);
     viewer.scene.primitives.add(polyline);
     polyline.setEditable();
+    //添加监听事件
     polyline.addListener('onEdited', function (event) {
         var msg = '';
         if (event.objId) {
