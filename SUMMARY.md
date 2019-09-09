@@ -18,13 +18,13 @@
     * [PolygonPrimtive](shi-li/shi-xian-xian/polygonprimtive.md)
     * [util](shi-li/shi-xian-xian/util.md)
   * [可编辑绘制](shi-li/ke-bian-ji-hui-zhi.md)
+    * 参数表
     * [ChangeblePrimitive](shi-li/ke-bian-ji-hui-zhi/changebleprimitive.md)
     * [prototype-enhancePrimitives](shi-li/ke-bian-ji-hui-zhi/prototype-enhanceprimitives.md)
     * [changeablePrimitiveTool](shi-li/ke-bian-ji-hui-zhi/changeableprimitivetool.md)
     * [use](shi-li/ke-bian-ji-hui-zhi/use.md)
     * [util](shi-li/ke-bian-ji-hui-zhi/util.md)
     * [util-BillboardGroup](shi-li/ke-bian-ji-hui-zhi/util-billboardgroup.md)
-    * 参数表
   * [提示框](shi-li/ti-shi-kuang.md)
 * [项目遇到的坑](keng.md)
 * [随笔](sui-bi.md)
