@@ -1,4 +1,6 @@
-## addListener事件监听
+```
+addListener事件监听
+```
 
 addListener是用于鼠标，键盘等特殊元素的一些监听
 
@@ -13,7 +15,13 @@ btn.addEventListener("click",function () {
 
 # js判断数组中是否存在某个值
 
+```
+$.inArray(item,items) == -1 
+```
 
+```
+items.indexOf(item) == -1
+```
 
-
+注意类型
 
