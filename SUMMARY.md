@@ -11,12 +11,12 @@
   * [Cartesian3\(3D笛卡尔点\)](cartesian33ddi-qia-er-70b929.md)
 * [实例](shi-li.md)
   * [点击获取经纬度](shi-li/dian-ji-huo-qu-jing-wei-du.md)
-* [项目遇到的坑](keng.md)
 * [实现线](shi-li/shi-xian-xian.md)
   * [ChangeablePrimtive](shi-li/shi-xian-xian/changeableprimtive.md)
   * [PolylinePrimitive](shi-li/shi-xian-xian/polylineprimitive.md)
   * [PolygonPrimtive](shi-li/shi-xian-xian/polygonprimtive.md)
   * [util](shi-li/shi-xian-xian/util.md)
+* [项目遇到的坑](keng.md)
 * [随笔](sui-bi.md)
   * [prototype-new](sui-bi/prototype-new.md)
 
