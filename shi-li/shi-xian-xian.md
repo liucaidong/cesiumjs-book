@@ -27,6 +27,8 @@ var DynamicDrawTool = (function(){
     function _(){};
 
     //ChangeablePrimtive -子目录ChangeablePrimtive 
+    
+    
 
 });
 ```
