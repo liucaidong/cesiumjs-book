@@ -6,7 +6,7 @@
 PolylinePrimitive = (function () {}(
     var materialLine = Cesium.Material.fromType(Cesium.Material.ColorType);
     materialLine.uniforms.color = new Cesium.Color(1.0, 1.0, 0.0, 0.5);
-    
+
     //线的属性
     var defaultShapeOptions = {
         ellipsoid: Cesium.Ellipsoid.WGS84,
@@ -25,14 +25,14 @@ PolylinePrimitive = (function () {}(
         }),
         material: materialLine
     });
-    
+
     function _(options) {
         options = copyOptionsDraw(options, defaultPolylineOptions);
 
         this.initialiseOptions(options);
     }
-    
-    
+
+     _.prototype = new ChangeablePrimitive(); //?? 继承
 ));
 ```
 
