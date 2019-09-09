@@ -76,7 +76,7 @@ var DynamicDrawTool = (function(){
             }
         }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
     }
-    
+
     //开始绘制多边形
     _.startDrawingPolyshape = function (viewer, isPolygon, PolyOption, callback) {
         var scene = viewer.scene;
@@ -88,7 +88,7 @@ var DynamicDrawTool = (function(){
         }
 
         CesiumTooltip.initTool(viewer);
-        
+
         var minPoints = isPolygon ? 3 : 2;
         var primitives = scene.primitives;
         var poly;
@@ -98,13 +98,85 @@ var DynamicDrawTool = (function(){
         } else {
             poly = new PolylinePrimitive(PolyOption);
         }
-        
-                
+        poly.asynchronous = false;
+        primitives.add(poly);
+
+        var positions = [];
+        mouseHandlerDraw.setInputAction(function (movement) {
+            if (movement.position != null) {
+                var cartesian = scene.camera.pickEllipsoid(movement.position, ellipsoid);
+                if (cartesian) {
+                    // first click
+                    if (positions.length == 0) {
+                        positions.push(cartesian.clone());
+                    }
+                    if (positions.length >= minPoints) {
+                        poly.positions = positions;
+                        poly._createPrimitive = true;
+                    }
+
+                    positions.push(cartesian);
+                }
+            }
+        }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+        //提示
+        mouseHandlerDraw.setInputAction(function (movement) {
+            var position = movement.endPosition;
+            if (position != null) {
+                if (positions.length == 0) {
+                    CesiumTooltip.showAt(position, "点击添加第一个点");
+                } else {
+                    var cartesian = scene.camera.pickEllipsoid(position, ellipsoid);
+                    if (cartesian) {
+                        positions.pop();
+                        // make sure it is slightly different
+                        cartesian.y += (1 + Math.random());
+                        positions.push(cartesian);
+                        if (positions.length >= minPoints) {
+                            poly.positions = positions;
+                            poly._createPrimitive = true;
+                        }
+                        if (positions.length === 2) {
+                            CesiumTooltip.showAt(position, "点击添加第二个点");
+                        } else {
+                            CesiumTooltip.showAt(position, "双击结束编辑");
+                        }
+                    }
+                }
+            }
+        }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
+        //双击结束
+        mouseHandlerDraw.setInputAction(function (movement) {
+            var position = movement.position;
+            if (position != null) {
+                if (positions.length < minPoints + 2) {
+                    return;
+                } else {
+                    var cartesian = scene.camera.pickEllipsoid(position, ellipsoid);
+                    if (cartesian) {
+                        //_self.stopDrawing();
+                        if (typeof callback == 'function') {
+                            //positions.push(cartesian);
+                            callback(positions);
+                        }
+                        if (mouseHandlerDraw) {
+                            mouseHandlerDraw.destroy();
+                            mouseHandlerDraw = null;
+                        }
+                        if (CesiumTooltip) {
+                            CesiumTooltip.setVisible(false);
+                        }
+                        if (poly) {
+                            primitives.remove(poly);
+                        }
+                    }
+                }
+            }
+        }, Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK);
+        return _;
     });
 });
 ```
-
-* 线的实现
 
 
 

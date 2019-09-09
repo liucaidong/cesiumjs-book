@@ -8,6 +8,7 @@
   * [Material\(材料\)](material.md)
   * [camere\(相机\)](camere.md)
     * [pickEllipsoid](camere/pickellipsoid.md)
+  * [Cartesian3\(3D笛卡尔点\)](cartesian33ddi-qia-er-70b929.md)
 * [实例](shi-li.md)
   * [点击获取经纬度](shi-li/dian-ji-huo-qu-jing-wei-du.md)
 * [项目遇到的坑](keng.md)
