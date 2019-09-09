@@ -21,6 +21,11 @@ function drawLine() {
 
 ```
 var DynamicDrawTool = (function(){
+    var mouseHandlerDraw; //鼠标控制句柄
+    var ellipseoid = Cesium.Ellipsoid.WGS84; //浏览器WGS84地图球体
+    
+    function _(){};
+    
     
 });
 ```
