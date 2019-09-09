@@ -139,13 +139,76 @@ _.prototype.enhancePrimitives = function () {
                 };
                 markers.addBillboards(_self.positions, handleMarkerChanges);
                 this._markers = markers;
-            
+                function calculateHalfMarkerPosition(index) {
+                    var positions = _self.positions;
+                    return ellipsoid.cartographicToCartesian(
+                            new Cesium.EllipsoidGeodesic(ellipsoid.cartesianToCartographic(positions[index]),
+                                ellipsoid.cartesianToCartographic(positions[index < positions.length - 1 ? index + 1 : 0])).
+                                interpolateUsingFraction(0.5)
+                        );        
+                }
+                var halfPositions = [];
+                var index = 0;
+                var length = _self.positions.length + (this.isPolygon ? 0 : -1);
+                for (; index < length; index++) {
+                    halfPositions.push(calculateHalfMarkerPosition(index));
+                }
+                 var handleEditMarkerChanges = {
+                     dragHandlers: {
+                        onDragStart: function (index, position) {
+                            // add a new position to the polygon but not a new marker yet
+                            this.index = index + 1;
+                            _self.positions.splice(this.index, 0, position);
+                            _self._createPrimitive = true;
+                        },
+                        onDrag: function (index, position) {
+                            _self.positions[this.index] = position;
+                            _self._createPrimitive = true;
+                        },
+                        onDragEnd: function (index, position) {
+                            // create new sets of makers for editing
+                            markers.insertBillboard(this.index, position, handleMarkerChanges);
+                            editMarkers.getBillboard(this.index - 1).position = calculateHalfMarkerPosition(this.index - 1);
+                            editMarkers.insertBillboard(this.index, calculateHalfMarkerPosition(this.index), handleEditMarkerChanges);
+                            _self._createPrimitive = true;
+                            onEdited();
+                        }
+                    },
+                    tooltip: function () {
+                        return "拖动创建新结点";
+                    }
+                 };
+                 editMarkers.addBillboards(halfPositions, handleEditMarkerChanges);
+                 this._editMarkers = editMarkers;
+                 // add a handler for clicking in the globe
+                 this._globeClickhandler = new Cesium.ScreenSpaceEventHandler(scene.canvas);
+                 this._globeClickhandler.setInputAction(
+                        function (movement) {
+                            var pickedObject = scene.pick(movement.position);
+                            if (!(pickedObject && pickedObject.primitive)) {
+                                _self.setEditMode(false);
+                            }
+                        }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+
+                    // set on top of the polygon
+                    markers.setOnTop();
+                    editMarkers.setOnTop();
             }
+            this._editMode = true;
+        }else {
+            if (this._markers != null) {
+                this._markers.remove();
+                this._editMarkers.remove();
+                this._markers = null;
+                this._editMarkers = null;
+                this._globeClickhandler.destroy();
+            }
+            this._editMode = false;
         }
     }
-    
-    
+
 }
 ```
+
 
 

@@ -20,6 +20,7 @@
   * [可编辑绘制](shi-li/ke-bian-ji-hui-zhi.md)
     * [ChangeblePrimitive](shi-li/ke-bian-ji-hui-zhi/changebleprimitive.md)
     * [prototype-enhancePrimitives](shi-li/ke-bian-ji-hui-zhi/prototype-enhanceprimitives.md)
+    * [changeablePrimitiveTool](shi-li/ke-bian-ji-hui-zhi/changeableprimitivetool.md)
     * [util](shi-li/ke-bian-ji-hui-zhi/util.md)
   * [提示框](shi-li/ti-shi-kuang.md)
 * [项目遇到的坑](keng.md)
