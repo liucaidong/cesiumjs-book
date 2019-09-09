@@ -1,41 +1,10 @@
-## 实现线
-
-* 点的操作
-
-执行：参数： viewer,lineoption,callback
-
-```
-function drawLine() {
-    var lineOption = {
-        width: 5,
-        geodesic: true
-    };
-    DynamicDrawTool.startDrawingPolyshape(viewer, false, lineOption, function (cartesians) {
-        //下面对处理代码
-        //....
-    });
-}
-```
-
-动态绘制工具
-
-```
-var DynamicDrawTool = (function(){
-    var mouseHandlerDraw; //鼠标控制句柄
-    var ellipseoid = Cesium.Ellipsoid.WGS84; //浏览器WGS84地图球体
-
-    function _(){};
-
-    //ChangeablePrimtive -子目录ChangeablePrimtive 
-
-});
-```
+## changeablePrmtive
 
 ```
 ChangeablePrimitive = (function(){
         function _() {
         }
-
+        
         _.prototype.initialiseOptions = function (options) {
             fillOptionsDraw(this, options);
 
@@ -50,16 +19,16 @@ ChangeablePrimitive = (function(){
             this._primitive = undefined;
             this._outlinePolygon = undefined;
         };
-
+        
         _.prototype.setAttribute = function (name, value) {
             this[name] = value;
             this._createPrimitive = true;
         };
-
+        
         _.prototype.getAttribute = function (name) {
             return this[name];
         };
-
+        
         _.prototype.update = function (context, frameState, commandList) {
 
             if (!Cesium.defined(this.ellipsoid)) {
@@ -144,16 +113,16 @@ ChangeablePrimitive = (function(){
             this._outlinePolygon && this._outlinePolygon.update(context, frameState, commandList);
 
         };
-
+        
         _.prototype.isDestroyed = function () {
             return false;
         };
-
+        
         _.prototype.destroy = function () {
             this._primitive = this._primitive && this._primitive.destroy();
             return Cesium.destroyObject(this);
         };
-
+        
         _.prototype.setStrokeStyle = function (strokeColor, strokeWidth) {
             if (!this.strokeColor || !this.strokeColor.equals(strokeColor) || this.strokeWidth != strokeWidth) {
                 this._createPrimitive = true;
@@ -163,9 +132,8 @@ ChangeablePrimitive = (function(){
         };
         return _;
     });
-```
 
-* 线的实现
+```
 
 
 
