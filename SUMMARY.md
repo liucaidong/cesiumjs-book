@@ -6,5 +6,6 @@
   * [影像服务&地形服务](ying-xiang-fu-52a126-di-xing-fu-wu.md)
   * [三维模型\(Entity&Primitive\)](san-wei-mo-578b28-entity-and-primitive.md)
 * [实例](shi-li.md)
+  * [点击获取经纬度](shi-li/dian-ji-huo-qu-jing-wei-du.md)
 * [项目遇到的坑](keng.md)
 
