@@ -24,6 +24,14 @@
 | :--- | :--- |
 |  |  |
 
+内部方法
+
+| setListener |  |
+| :--- | :--- |
+| enhanceWithListeners |  |
+
+---
+
 ##### ChangeablePrimitive
 
 ChangeablePrimitiveTool.ChangeablePrimitive
@@ -39,7 +47,7 @@ ChangeablePrimitiveTool.ChangeablePrimitive
 | update |  |
 | isDestroyed |  |
 | destroy |  |
-| setStrokeStyle |  |
+| setStrokeStyle | 设置笔划样式 |
 
 
 

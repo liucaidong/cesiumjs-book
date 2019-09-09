@@ -32,4 +32,7 @@
 * [项目遇到的坑](keng.md)
 * [随笔](sui-bi.md)
   * [prototype-new](sui-bi/prototype-new.md)
+  * [js](js.md)
+
+
 
