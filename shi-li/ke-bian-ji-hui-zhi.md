@@ -50,7 +50,7 @@ var ChangeablePrimitiveTool = (function () {
         //this._tooltip = createTooltip(viewer.cesiumWidget.container);
         TooltipDiv.initTool(viewer.cesiumWidget.container);
         this._surfaces = [];
-        
+
         //初始化
         this.initialiseHandlers();
         //增强监听

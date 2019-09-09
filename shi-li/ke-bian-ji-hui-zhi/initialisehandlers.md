@@ -54,5 +54,11 @@ _.prototype.initialiseHandlers = function () {
 };
 ```
 
+* leftClick - LEFT\_CLICK
+* leftDoubleClick - LEFT\_DOUBLE\_CLICK
+*  - MOUSE\_MOVE
+* leftUp - LEFT\_UP
+* leftDown - LEFT\_DOWN
+
 
 

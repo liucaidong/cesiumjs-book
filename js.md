@@ -11,5 +11,9 @@ btn.addEventListener("click",function () {
 });
 ```
 
+# js判断数组中是否存在某个值
+
+
+
 
 

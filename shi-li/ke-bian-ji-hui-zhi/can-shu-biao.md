@@ -4,7 +4,7 @@
 
 参数：
 
-| isCreat |  |
+| isCreat | 是否创建（init为true） |
 | :--- | :--- |
 | ellipsoid |  |
 | materialLine |  |
