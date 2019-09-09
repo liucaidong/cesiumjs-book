@@ -17,6 +17,14 @@ function drawLine() {
 }
 ```
 
+动态绘制工具
+
+```
+var DynamicDrawTool = (function(){
+    
+});
+```
+
 * 线的实现
 
 
