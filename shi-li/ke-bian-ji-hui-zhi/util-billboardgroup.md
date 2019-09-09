@@ -12,12 +12,13 @@ _.BillboardGroup = function (changeablePrimitiveTool, options) {
     var b = new Cesium.BillboardCollection();
     this._scene.primitives.add(b);
     this._billboards = b;
-    
+
     // keep an ordered list of billboards
     this._orderedBillboards = [];
-    
+
    //设置属性方法 prototype.xxx 
-      
+   _.BillboardGroup.prototype.createBillboard = function (position, callbacks) {
+   }
 }
 ```
 
