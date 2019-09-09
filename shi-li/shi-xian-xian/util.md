@@ -54,5 +54,15 @@ function fillOptionsDraw(options, defaultOptions) {
 }
 ```
 
+##### getDisplayLatLngString
+
+获取经纬度
+
+```
+function getDisplayLatLngString(cartographic, precision) {
+    return Cesium.Math.toDegrees(cartographic.longitude).toFixed(precision || 3) + ", " + Cesium.Math.toDegrees(cartographic.latitude).toFixed(precision || 3);
+}
+```
+
 
 

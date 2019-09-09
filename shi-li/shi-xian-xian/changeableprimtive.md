@@ -1,5 +1,7 @@
 ## ChangeablePrmtive
 
+可变的实体基类
+
 ```
 ChangeablePrimitive = (function(){
         function _() {

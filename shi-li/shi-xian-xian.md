@@ -30,7 +30,77 @@ var DynamicDrawTool = (function(){
 
     //PolylinePrimtitve -子目录PolylinePrimtitve 折线
 
-    //
+    //PolygonPrimitive 多边形
+
+    //画点
+    _.startDrawingMarker = function (viewer, msg, callback) {
+        var scene = viewer.scene;
+        if (mouseHandlerDraw) {
+            mouseHandlerDraw.destroy();
+            mouseHandlerDraw = null;
+        } else {
+            mouseHandlerDraw = new Cesium.ScreenSpaceEventHandler(scene.canvas);
+        }
+        CesiumTooltip.initTool(viewer);
+        //点击获取点击的位置
+        mouseHandlerDraw.setInputAction(function (movement) {
+            if (movement.position != null) {
+            //
+                var cartesian = scene.camera.pickEllipsoid(movement.position, ellipsoid);
+                if (cartesian) {
+                    //if (callback) {
+                    if (typeof callback == 'function') {
+                        callback(cartesian);
+                    }
+                }
+                if (mouseHandlerDraw) {
+                    mouseHandlerDraw.destroy();
+                    mouseHandlerDraw = null;
+
+                }
+                if (CesiumTooltip) {
+                    CesiumTooltip.setVisible(false);
+                }
+            }
+        }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+        //移动，tiptool跟随
+        mouseHandlerDraw.setInputAction(function (movement) {
+            var position = movement.endPosition;
+            if (position != null) {
+                var cartesian = scene.camera.pickEllipsoid(position, ellipsoid);
+                if (cartesian) {
+                    CesiumTooltip.showAt(position, msg + "\n位置:" + getDisplayLatLngString(ellipsoid.cartesianToCartographic(cartesian)));
+                } else {
+                    CesiumTooltip.showAt(position, msg);
+                }
+            }
+        }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
+    }
+    
+    //开始绘制多边形
+    _.startDrawingPolyshape = function (viewer, isPolygon, PolyOption, callback) {
+        var scene = viewer.scene;
+        if (mouseHandlerDraw) {
+            mouseHandlerDraw.destroy();
+            mouseHandlerDraw = null;
+        } else {
+            mouseHandlerDraw = new Cesium.ScreenSpaceEventHandler(scene.canvas);
+        }
+
+        CesiumTooltip.initTool(viewer);
+        
+        var minPoints = isPolygon ? 3 : 2;
+        var primitives = scene.primitives;
+        var poly;
+        //声明线或者多边形实体
+        if (isPolygon) {
+            poly = new PolygonPrimitive(PolyOption);
+        } else {
+            poly = new PolylinePrimitive(PolyOption);
+        }
+        
+                
+    });
 });
 ```
 
