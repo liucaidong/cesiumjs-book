@@ -30,6 +30,8 @@
 | setListener |  |
 | :--- | :--- |
 | enhanceWithListeners | 增强监听事件 |
+| initialiseHandlers |  |
+| enhancePrimitives |  |
 
 ---
 

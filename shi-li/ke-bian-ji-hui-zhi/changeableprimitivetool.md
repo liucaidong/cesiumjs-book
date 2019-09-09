@@ -1,6 +1,6 @@
 ## ChangeablePrimitiveTool
 
-#### PolylinePrimitive 
+#### PolylinePrimitive
 
 画线
 
@@ -71,20 +71,20 @@ ChangeablePrimitiveTool.PolylinePrimitive.prototype.setEditableFalse = function 
 ```
 ChangeablePrimitiveTool.PolygonPrimitive.prototype.setEditable = function () {
 
-	var polygon = this;
-	polygon.asynchronous = false;
+    var polygon = this;
+    polygon.asynchronous = false;
 
-	var scene = changeablePrimitiveTool._scene;
+    var scene = changeablePrimitiveTool._scene;
 
-	changeablePrimitiveTool.registerEditableShape(polygon);
+    changeablePrimitiveTool.registerEditableShape(polygon);
 
-	polygon.setEditMode = setEditMode;
+    polygon.setEditMode = setEditMode;
 
-	polygon.setHighlighted = setHighlighted;
+    polygon.setHighlighted = setHighlighted;
 
-	enhanceWithListeners(polygon);
+    enhanceWithListeners(polygon);
 
-	polygon.setEditMode(false);
+    polygon.setEditMode(false);
 };
 ```
 
