@@ -33,8 +33,6 @@ var DynamicDrawTool = (function(){
 });
 ```
 
-
-
 * 线的实现
 
 
