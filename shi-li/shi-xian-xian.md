@@ -26,11 +26,11 @@ var DynamicDrawTool = (function(){
 
     function _(){};
 
-    //ChangeablePrimtive -子目录ChangeablePrimtive 
+    //ChangeablePrimtive -子目录ChangeablePrimtive 可变的实体基类
 
-    //PolylinePrimtitve -子目录PolylinePrimtitve 
+    //PolylinePrimtitve -子目录PolylinePrimtitve 折线
+
     
-
 });
 ```
 

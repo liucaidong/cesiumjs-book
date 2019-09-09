@@ -67,7 +67,6 @@ PolylinePrimitive = (function () {}(
         });
      };
      return _;
-
 )());
 ```
 
