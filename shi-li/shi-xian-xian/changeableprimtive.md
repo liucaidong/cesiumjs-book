@@ -59,7 +59,7 @@ ChangeablePrimitive = (function(){
                 (this._textureRotationAngle !== this.textureRotationAngle) ||
                 (this._id !== this.id)) {
 
-                var geometry = this.getGeometry();
+                var geometry = this.getGeometry(); //获取的是子类属性
                 if (!geometry) {
                     return;
                 }
