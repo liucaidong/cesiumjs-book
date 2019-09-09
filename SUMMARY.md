@@ -10,6 +10,7 @@
     * [pickEllipsoid](camere/pickellipsoid.md)
   * [Cartesian3\(3D笛卡尔点\)](cartesian33ddi-qia-er-70b929.md)
   * [Billboard\(广告牌\)](billboard.md)
+  * [Primitive\(几何体\)](primitiveji-he-4f5329.md)
 * [实例](shi-li.md)
   * [点击获取经纬度](shi-li/dian-ji-huo-qu-jing-wei-du.md)
   * [动态绘制](shi-li/shi-xian-xian.md)
@@ -18,7 +19,7 @@
     * [PolygonPrimtive](shi-li/shi-xian-xian/polygonprimtive.md)
     * [util](shi-li/shi-xian-xian/util.md)
   * [可编辑绘制](shi-li/ke-bian-ji-hui-zhi.md)
-    * 参数表
+    * [参数表](shi-li/ke-bian-ji-hui-zhi/can-shu-biao.md)
     * [ChangeblePrimitive](shi-li/ke-bian-ji-hui-zhi/changebleprimitive.md)
     * [prototype-enhancePrimitives](shi-li/ke-bian-ji-hui-zhi/prototype-enhanceprimitives.md)
     * [changeablePrimitiveTool](shi-li/ke-bian-ji-hui-zhi/changeableprimitivetool.md)
