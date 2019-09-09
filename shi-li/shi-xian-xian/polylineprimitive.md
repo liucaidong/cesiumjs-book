@@ -33,7 +33,7 @@ PolylinePrimitive = (function () {}(
     }
 
      _.prototype = new ChangeablePrimitive(); //?? 继承
-     
+
      //设置方法
      _.prototype.setPositions = function (positions) {
         this.setAttribute('positions', positions);
@@ -44,6 +44,7 @@ PolylinePrimitive = (function () {}(
      _.prototype.setGeodesic = function (geodesic) {
      this.setAttribute('geodesic', geodesic);
      };
+     //获取方法
      _.prototype.getPositions = function () {
         return this.getAttribute('positions');
      };
@@ -53,7 +54,21 @@ PolylinePrimitive = (function () {}(
      _.prototype.getGeodesic = function (geodesic) {
         return this.getAttribute('geodesic');
      };
-));
+     _.prototype.getGeometry = function () {
+        if (!Cesium.defined(this.positions) || this.positions.length < 2) {
+            return;
+        }
+        return new Cesium.PolylineGeometry({
+            positions: this.positions,
+            height: this.height,
+            width: this.width < 1 ? 1 : this.width,
+            vertexFormat: Cesium.EllipsoidSurfaceAppearance.VERTEX_FORMAT,
+            ellipsoid: this.ellipsoid
+        });
+     };
+     return _;
+
+)());
 ```
 
 
