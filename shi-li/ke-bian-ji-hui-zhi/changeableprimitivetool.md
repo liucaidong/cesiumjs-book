@@ -1,48 +1,50 @@
 ## ChangeablePrimitiveTool
 
-##### PolylinePrimitive : 画线
+画线
+
+##### PolylinePrimitive : setEditable
 
 ```
 //添加属性方法：setEditable
 ChangeablePrimitiveTool.PolylinePrimitive.prototype.setEditable = function () {
-	if (this.setEditMode) {
-		return;
-	}
-	
-	var polyline = this;
-	polyline.isPolygon = false;
-	polyline.asynchronous = false;
+    if (this.setEditMode) {
+        return;
+    }
 
-	changeablePrimitiveTool.registerEditableShape(polyline);
+    var polyline = this;
+    polyline.isPolygon = false;
+    polyline.asynchronous = false;
 
-	polyline.setEditMode = setEditMode;
+    changeablePrimitiveTool.registerEditableShape(polyline);
 
-	var originalWidth = this.width;
+    polyline.setEditMode = setEditMode;
 
-	polyline.setHighlighted = function (highlighted) {
-		// disable if already in edit mode
-		if (this._editMode === true) {
-			return;
-		}
-		if (highlighted) {
-			changeablePrimitiveTool.setHighlighted(this);
-			this.setWidth(originalWidth * 2);
-		} else {
-			this.setWidth(originalWidth);
-		}
-	};
+    var originalWidth = this.width;
 
-	polyline.getExtent = function () {
-		return Cesium.Extent.fromCartographicArray(ellipsoid.cartesianArrayToCartographicArray(this.positions));
-	};
-	
-	//添加监听
-	enhanceWithListeners(polyline);
-	polyline.setEditMode(false);
+    polyline.setHighlighted = function (highlighted) {
+        // disable if already in edit mode
+        if (this._editMode === true) {
+            return;
+        }
+        if (highlighted) {
+            changeablePrimitiveTool.setHighlighted(this);
+            this.setWidth(originalWidth * 2);
+        } else {
+            this.setWidth(originalWidth);
+        }
+    };
+
+    polyline.getExtent = function () {
+        return Cesium.Extent.fromCartographicArray(ellipsoid.cartesianArrayToCartographicArray(this.positions));
+    };
+
+    //添加监听
+    enhanceWithListeners(polyline);
+    polyline.setEditMode(false);
 };
 ```
 
-
+##### PolylinePrimitive：setEditableFalse
 
 
 
