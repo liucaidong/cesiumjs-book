@@ -33,6 +33,26 @@ PolylinePrimitive = (function () {}(
     }
 
      _.prototype = new ChangeablePrimitive(); //?? 继承
+     
+     //设置方法
+     _.prototype.setPositions = function (positions) {
+        this.setAttribute('positions', positions);
+     };
+     _.prototype.setWidth = function (width) {
+        this.setAttribute('width', width);
+     };
+     _.prototype.setGeodesic = function (geodesic) {
+     this.setAttribute('geodesic', geodesic);
+     };
+     _.prototype.getPositions = function () {
+        return this.getAttribute('positions');
+     };
+     _.prototype.getWidth = function () {
+        return this.getAttribute('width');
+     };
+     _.prototype.getGeodesic = function (geodesic) {
+        return this.getAttribute('geodesic');
+     };
 ));
 ```
 
