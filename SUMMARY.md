@@ -12,7 +12,6 @@
   * [Billboard\(广告牌\)](billboard.md)
   * [Primitive\(几何体\)](primitiveji-he-4f5329.md)
     * [GeometryInstance\(几何实例\)](geometryinstance.md)
-    * [primitive实例](shi-li.md)
 * [实例](shi-li.md)
   * [点击获取经纬度](shi-li/dian-ji-huo-qu-jing-wei-du.md)
   * [动态绘制](shi-li/shi-xian-xian.md)
@@ -32,4 +31,6 @@
 * [项目遇到的坑](keng.md)
 * [随笔](sui-bi.md)
   * [prototype-new](sui-bi/prototype-new.md)
+
+
 
