@@ -1,10 +1,10 @@
-## changeablePrmtive
+## ChangeablePrmtive
 
 ```
 ChangeablePrimitive = (function(){
         function _() {
         }
-        
+
         _.prototype.initialiseOptions = function (options) {
             fillOptionsDraw(this, options);
 
@@ -19,16 +19,16 @@ ChangeablePrimitive = (function(){
             this._primitive = undefined;
             this._outlinePolygon = undefined;
         };
-        
+
         _.prototype.setAttribute = function (name, value) {
             this[name] = value;
             this._createPrimitive = true;
         };
-        
+
         _.prototype.getAttribute = function (name) {
             return this[name];
         };
-        
+
         _.prototype.update = function (context, frameState, commandList) {
 
             if (!Cesium.defined(this.ellipsoid)) {
@@ -113,16 +113,16 @@ ChangeablePrimitive = (function(){
             this._outlinePolygon && this._outlinePolygon.update(context, frameState, commandList);
 
         };
-        
+
         _.prototype.isDestroyed = function () {
             return false;
         };
-        
+
         _.prototype.destroy = function () {
             this._primitive = this._primitive && this._primitive.destroy();
             return Cesium.destroyObject(this);
         };
-        
+
         _.prototype.setStrokeStyle = function (strokeColor, strokeWidth) {
             if (!this.strokeColor || !this.strokeColor.equals(strokeColor) || this.strokeWidth != strokeWidth) {
                 this._createPrimitive = true;
@@ -131,8 +131,7 @@ ChangeablePrimitive = (function(){
             }
         };
         return _;
-    });
-
+    }());
 ```
 
 

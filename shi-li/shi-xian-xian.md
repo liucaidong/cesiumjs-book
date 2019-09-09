@@ -28,6 +28,7 @@ var DynamicDrawTool = (function(){
 
     //ChangeablePrimtive -子目录ChangeablePrimtive 
 
+    //PolylinePrimtitve -子目录PolylinePrimtitve 
     
 
 });
