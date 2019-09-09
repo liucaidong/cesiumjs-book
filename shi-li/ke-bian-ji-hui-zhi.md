@@ -107,6 +107,30 @@ var ChangeablePrimitiveTool = (function () {
         this.enhancePrimitives();
         isCreat = true;
     }
+    
+    //注册编辑事件
+    // shape should implement setEditMode and setHighlighted
+    _.prototype.registerEditableShape = function (surface) {
+    	var _self = this;
+    	// handlers for interactions
+    	// highlight polygon when mouse is entering
+    	setListener(surface, 'mouseMove', function (position) {
+    		surface.setHighlighted(true);
+    		if (!surface._editMode) {
+    			//_self._tooltip.showAt(position, "点击编辑结点");
+    			TooltipDiv.showAt(position, "点击编辑结点");
+    		}
+    	});
+    	// hide the highlighting when mouse is leaving the polygon
+    	setListener(surface, 'mouseOut', function (position) {
+    		surface.setHighlighted(false);
+    		//_self._tooltip.setVisible(false);
+    		TooltipDiv.setVisible(false);
+    	});
+    	setListener(surface, 'leftClick', function (position) {
+    		surface.setEditMode(true);
+    	});
+    };
 
      _.prototype.initialiseHandlers = function () {
         var scene = this._scene;

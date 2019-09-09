@@ -8,6 +8,16 @@ function setListener(primitive, type, callback) {
 }
 ```
 
+##### muteHandlers
+
+取消
+
+```
+_.prototype.muteHandlers = function (muted) {
+    this._handlersMuted = muted;
+};
+```
+
 ##### enhanceWithListeners
 
 ```
@@ -33,6 +43,35 @@ function enhanceWithListeners(element) {
         }
     }
 }
+```
+
+##### disableAllHighlights
+
+确保只有一个对象处于高亮
+
+```
+_.prototype.disableAllHighlights = function () {
+    this.setHighlighted(undefined);
+};
+ _.prototype.setHighlighted = function (surface) {
+    if (this._highlightedSurface && !this._highlightedSurface.isDestroyed() && this._highlightedSurface != surface) {
+        this._highlightedSurface.setHighlighted(false);
+    }
+    this._highlightedSurface = surface;
+};
+```
+
+##### setEdited
+
+设置编辑状态
+
+```
+_.prototype.setEdited = function (surface) {
+    if (this._editedSurface && !this._editedSurface.isDestroyed()) {
+        this._editedSurface.setEditMode(false);
+    }
+    this._editedSurface = surface;
+};
 ```
 
 

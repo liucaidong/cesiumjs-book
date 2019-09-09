@@ -1,8 +1,12 @@
 ## ChangeablePrimitiveTool
 
+#### PolylinePrimitive 
+
 画线
 
 ##### PolylinePrimitive : setEditable
+
+设置可编辑
 
 ```
 //添加属性方法：setEditable
@@ -45,6 +49,56 @@ ChangeablePrimitiveTool.PolylinePrimitive.prototype.setEditable = function () {
 ```
 
 ##### PolylinePrimitive：setEditableFalse
+
+设置不可编辑
+
+```
+//取消编辑状态 -- 在外层控制 
+ChangeablePrimitiveTool.PolylinePrimitive.prototype.setEditableFalse = function () {
+    var polyline = this;
+    if (polyline.setEditMode) {
+        polyline.setEditMode(false);
+    }
+}
+```
+
+#### PolygonPrimitive
+
+画多边型
+
+##### setEditable：设置可编辑
+
+```
+ChangeablePrimitiveTool.PolygonPrimitive.prototype.setEditable = function () {
+
+	var polygon = this;
+	polygon.asynchronous = false;
+
+	var scene = changeablePrimitiveTool._scene;
+
+	changeablePrimitiveTool.registerEditableShape(polygon);
+
+	polygon.setEditMode = setEditMode;
+
+	polygon.setHighlighted = setHighlighted;
+
+	enhanceWithListeners(polygon);
+
+	polygon.setEditMode(false);
+};
+```
+
+##### setEditableFalse：设置不可编辑
+
+```
+//取消编辑状态 -- 在外层控制 
+ChangeablePrimitiveTool.PolygonPrimitive.prototype.setEditableFalse = function () {
+    var polygon = this;
+    if (polygon.setEditMode) {
+        polygon.setEditMode(false);
+    }
+}
+```
 
 
 
