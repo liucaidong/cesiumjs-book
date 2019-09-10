@@ -47,7 +47,13 @@ replicate-do-db      = demodb
 #binlog-ignore-db  = performation_schema
 #binlog-ignore-db  = sys
 #log-slave-updates = 1
-#read_only           = 1 
+#read_only           = 1
+
+--------------
+
+server-id=2
+relay-log-index=slave-relay-bin.index
+relay-log=slave-relay-bin
 ```
 
 #### slave连接master库 {#hslavemaster}
@@ -63,6 +69,17 @@ master_log_file='mysql-bin.000005',
 master_log_pos=761;
 
 start slave;
+
+
+-----------------
+change master to 
+master_host='192.168.3.21',
+master_user='root',
+master_password='237502',
+master_log_file='mysql-bin.000005',
+master_log_pos=761;
+
+show slave status \G
 ```
 
 
