@@ -11,6 +11,7 @@
     * [GeometryInstance\(几何实例\)](geometryinstance.md)
     * [primitive实例](primitiveshi-li.md)
   * [scene](scene.md)
+    * [pick](scene/pick.md)
   * [PolylineGeometry\(折线建模\)](polylinegeometry.md)
   * [Cartesian3\(3D笛卡尔点\)](cartesian33ddi-qia-er-70b929.md)
   * [Billboard\(广告牌\)](billboard.md)
