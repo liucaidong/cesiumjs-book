@@ -13,5 +13,19 @@
 | `vertexFormat` | [VertexFormat](https://cesiumjs.org/Cesium/Build/Documentation/VertexFormat.html) | `VertexFormat.DEFAULT` | 可选要计算的顶点属性。 |
 | `ellipsoid` | [椭球](https://cesiumjs.org/Cesium/Build/Documentation/Ellipsoid.html) | `Ellipsoid.WGS84` | 可选用作参考的椭圆体。 |
 
+#### 例子
+
+```
+ar polyline = new Cesium.PolylineGeometry({
+  positions : Cesium.Cartesian3.fromDegreesArray([
+    0.0, 0.0,
+    5.0, 0.0,
+    5.0, 5.0
+  ]),
+  width : 10.0
+});
+var geometry = Cesium.PolylineGeometry.createGeometry(polyline);
+```
+
 
 
