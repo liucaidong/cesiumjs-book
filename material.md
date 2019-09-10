@@ -1,4 +1,4 @@
-## new Cesium.Material\(options\) 
+## new Cesium.Material\(options\)
 
 材质通过漫反射，镜面反射，法线，发射和alpha分量的组合来定义表面外观。
 
