@@ -9,5 +9,5 @@
  }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
 ```
 
-
+鼠标移动： movement.endPosition
 
