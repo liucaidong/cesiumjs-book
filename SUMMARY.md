@@ -34,4 +34,5 @@
   * [prototype-new](sui-bi/prototype-new.md)
   * [js](js.md)
   * [Turf.js](sui-bi/turfjs.md)
+  * [mysql](sui-bi/mysql.md)
 
