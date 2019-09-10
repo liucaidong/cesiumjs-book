@@ -13,6 +13,7 @@
     * [primitive实例](primitiveshi-li.md)
   * [Cartesian3\(3D笛卡尔点\)](cartesian33ddi-qia-er-70b929.md)
   * [Billboard\(广告牌\)](billboard.md)
+  * [PolylineGeometry\(折线建模\)](polylinegeometry.md)
 * [实例](shi-li.md)
   * [点击获取经纬度](shi-li/dian-ji-huo-qu-jing-wei-du.md)
   * [动态绘制](shi-li/shi-xian-xian.md)
