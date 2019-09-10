@@ -17,5 +17,20 @@
 | `classificationType` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) | `ClassificationType.BOTH` | optional一个枚举属性，指定此折线是否会在地面上对terrain，3D Tiles或两者进行分类。 |
 | `zIndex` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) | `0` | optional一个属性，指定用于排序地面几何的zIndex。只有当\`clampToGround\`为真且支持地形上的折线时才有效。 |
 
+##### 实例
+
+```
+var greenRhumbLine = viewer.entities.add({
+    name : 'Green rhumb line',
+    polyline : {
+        positions : Cesium.Cartesian3.fromDegreesArray([-75, 35,
+                                                        -125, 35]),
+        width : 5,
+        arcType : Cesium.ArcType.RHUMB,
+        material : Cesium.Color.GREEN
+    }
+});
+```
+
 
 
