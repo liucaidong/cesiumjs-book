@@ -33,6 +33,7 @@
     * [util](shi-li/ke-bian-ji-hui-zhi/util.md)
     * [util-BillboardGroup](shi-li/ke-bian-ji-hui-zhi/util-billboardgroup.md)
   * [绘制点](shi-li/hui-zhi-dian.md)
+  * [绘制广告牌](shi-li/hui-zhi-guang-gao-pai.md)
 * [项目遇到的坑](keng.md)
 * [随笔](sui-bi.md)
   * [prototype-new](sui-bi/prototype-new.md)
