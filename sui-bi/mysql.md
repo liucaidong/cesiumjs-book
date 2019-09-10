@@ -17,7 +17,7 @@ binlog-do-db=weather_data
 
 ```
 GRANT REPLICATION SLAVE,RELOAD,SUPER ON *.*
-TO mysql_backup@'localhost'
+TO mysql_backup@'localhost' //ip号
 IDENTIFIED BY '123123';
 flush privileges;
 ```
