@@ -19,7 +19,7 @@
     * [Cartographic](cartographic.md)
     * [Rectangle](rectangle.md)
     * [Cartesian3](cartesian3.md)
-  * [EntityCollection](entitycollection.md)
+  * [EntityCollection\(实体几何\)](entitycollection.md)
   * [PolylineGeometry\(折线建模\)](polylinegeometry.md)
 * [实例](shi-li.md)
   * [点击获取经纬度](shi-li/dian-ji-huo-qu-jing-wei-du.md)
@@ -45,6 +45,4 @@
   * [js](js.md)
   * [Turf.js](sui-bi/turfjs.md)
   * [mysql](sui-bi/mysql.md)
-
-
 
