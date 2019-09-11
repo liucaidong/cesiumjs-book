@@ -1,5 +1,7 @@
 # EllipseGraphics
 
+描述由中心点和半长轴和半短轴定义的椭圆
+
 ```
 new Cesium.EllipseGraphics(options)
 ```
@@ -26,6 +28,20 @@ new Cesium.EllipseGraphics(options)
 | `distanceDisplayCondition` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) |  | optional一个属性，指定与摄像机相距该椭圆的距离。 |
 | `classificationType` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) | `ClassificationType.BOTH` | optional一个枚举属性，指定此椭圆是否会在地面上对terrain，3D Tiles或两者进行分类。 |
 | `zIndex` | [ConstantProperty](https://cesiumjs.org/Cesium/Build/Documentation/ConstantProperty.html) | `0` | optional一个指定Ellipse的zIndex的属性。用于订购地面几何形状。仅在椭圆为常量且未指定height或exturdedHeight时才有效。 |
+
+##### 例子
+
+```
+var redEllipse = viewer.entities.add({
+    position: Cesium.Cartesian3.fromDegrees(-103.0, 40.0),
+    name : 'Red ellipse on surface',
+    ellipse : {
+        semiMinorAxis : 250000.0,
+        semiMajorAxis : 400000.0,
+        material : Cesium.Color.RED.withAlpha(0.5)
+    }
+});
+```
 
 
 
