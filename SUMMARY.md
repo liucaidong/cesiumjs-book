@@ -19,8 +19,8 @@
     * [Cartographic](cartographic.md)
     * [Rectangle](rectangle.md)
     * [Cartesian3](cartesian3.md)
+  * [EntityCollection](entitycollection.md)
   * [PolylineGeometry\(折线建模\)](polylinegeometry.md)
-  * [Cartesian3\(3D笛卡尔点\)](cartesian33ddi-qia-er-70b929.md)
 * [实例](shi-li.md)
   * [点击获取经纬度](shi-li/dian-ji-huo-qu-jing-wei-du.md)
   * [提示框](shi-li/ti-shi-kuang.md)
@@ -45,4 +45,6 @@
   * [js](js.md)
   * [Turf.js](sui-bi/turfjs.md)
   * [mysql](sui-bi/mysql.md)
+
+
 
