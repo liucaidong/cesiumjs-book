@@ -11,6 +11,7 @@
     * [PolylineGraphics\(折线\)](entity/polylinegraphicszhe-7ebf29.md)
     * [RectangleGraphics](entity/rectanglegraphics.md)
     * [EllipseGraphics](entity/ellipsegraphics.md)
+    * [LabelGraphics](entity/labelgraphics.md)
   * [Primitive\(几何体\)](primitiveji-he-4f5329.md)
     * [GeometryInstance\(几何实例\)](geometryinstance.md)
     * [primitive实例](primitiveshi-li.md)
