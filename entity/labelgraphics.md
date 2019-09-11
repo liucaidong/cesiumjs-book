@@ -9,7 +9,7 @@ new Cesium.LabelGraphics(options)
 | 名称 | 类型 | 默认 | 描述 |
 | :--- | :--- | :--- | :--- |
 | `show` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) | `true` | optional一个boolean属性，指定标签的可见性。 |
-| `text` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) |  | optional一个指定文本的属性。支持显式换行符'\ n'。 |
+| `text` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) |  | optional一个指定文本的属性。支持显式换行符' n'。 |
 | `font` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) | `'30px sans-serif'` | optional一个指定CSS字体的属性。 |
 | `style` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) | `LabelStyle.FILL` | optional一个指定的属性[`LabelStyle`](https://cesiumjs.org/Cesium/Build/Documentation/LabelStyle.html)。 |
 | `scale` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) | `1.0` | optional一个数字属性，指定要应用于文本的比例。 |
@@ -29,6 +29,18 @@ new Cesium.LabelGraphics(options)
 | `scaleByDistance` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) |  | 可选的一个[`NearFarScalar`](https://cesiumjs.org/Cesium/Build/Documentation/NearFarScalar.html)属性用于基于从相机的距离来设定规模。 |
 | `distanceDisplayCondition` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) |  | optional一个属性，指定与相机相隔的距离，此标签将显示。 |
 | `disableDepthTestDistance` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) |  | optional一个属性，指定从相机到禁用深度测试的距离。 |
+
+##### 例子
+
+```
+viewer.entities.add({
+        position : Cesium.Cartesian3.fromDegrees(-75.1641667, 39.9522222),
+        label : {
+            text : 'Philadelphia'
+        }
+    });
+
+```
 
 
 
