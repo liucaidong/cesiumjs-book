@@ -1,5 +1,7 @@
 # Cartesian3
 
+3D笛卡尔点。
+
 ```
 new Cesium.Cartesian3(x, y, z)
 ```
