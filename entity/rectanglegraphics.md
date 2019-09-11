@@ -23,5 +23,17 @@
 | `classificationType` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) | `ClassificationType.BOTH` | optional一个枚举属性，指定此矩形是否会在地面上对terrain，3D Tiles或两者进行分类。 |
 | `zIndex` | [属性](https://cesiumjs.org/Cesium/Build/Documentation/Property.html) | `0` | optional一个属性，指定用于排序地面几何的zIndex。仅当矩形是常量且未指定height或extrudedHeight时才有效。 |
 
+##### 实例
+
+```
+var redRectangle = viewer.entities.add({
+    name : 'Red translucent rectangle',
+    rectangle : {
+        coordinates : Cesium.Rectangle.fromDegrees(-110.0, 20.0, -80.0, 25.0),
+        material : Cesium.Color.RED.withAlpha(0.5)
+    }
+});
+```
+
 
 
