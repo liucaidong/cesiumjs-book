@@ -18,9 +18,15 @@ var arrow = {
 }
 ```
 
-##### clearAll 
+##### clearAll
 
-
+```
+clearAll:function(){
+	for (var i = 0; i < this.drawArr.length; i++) {
+		this.drawArr[i].clear();
+	}
+}
+```
 
 ##### clearOne
 
