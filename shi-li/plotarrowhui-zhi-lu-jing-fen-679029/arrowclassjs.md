@@ -49,10 +49,10 @@ StraightArrow.prototype = {
 
 ```
 cartesianToLatlng: function(cartesian) {
-var latlng = this.viewer.scene.globe.ellipsoid.cartesianToCartographic(cartesian);
-var lat = Cesium.Math.toDegrees(latlng.latitude);
-var lng = Cesium.Math.toDegrees(latlng.longitude);
-return [lng, lat];
+    var latlng = this.viewer.scene.globe.ellipsoid.cartesianToCartographic(cartesian);
+    var lat = Cesium.Math.toDegrees(latlng.latitude);
+    var lng = Cesium.Math.toDegrees(latlng.longitude);
+    return [lng, lat];
 }
 ```
 
