@@ -5,6 +5,40 @@ define([],function(...){
     'use strict';
 
     function CallbackProperty(callback,isConstant){}
+    
+    defineProperties();
+});
+```
+
+##### defineProperties
+
+```
+defineProperties(CallbackProperty.prototype, {
+    /**
+     * Gets a value indicating if this property is constant.
+     * @memberof CallbackProperty.prototype
+     *
+     * @type {Boolean}
+     * @readonly
+     */
+    isConstant : {
+        get : function() {
+            return this._isConstant;
+        }
+    },
+    /**
+     * Gets the event that is raised whenever the definition of this property changes.
+     * The definition is changed whenever setCallback is called.
+     * @memberof CallbackProperty.prototype
+     *
+     * @type {Event}
+     * @readonly
+     */
+    definitionChanged : {
+        get : function() {
+            return this._definitionChanged;
+        }
+    }
 });
 ```
 
