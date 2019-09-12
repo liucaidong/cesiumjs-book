@@ -9,7 +9,7 @@ var arrow = {
     init: function(){},
     disable： function(){},
     draw: function(){},
-    
+    saveData: function(){},
 }
 ```
 
