@@ -1,9 +1,18 @@
 ## **CallbackProperty.js** {#blob-path}
 
 ```
-define([],function(){
-
+define([],function(...){
+    
 });
+```
+
+##### ...
+
+```
+defined,
+defineProperties,
+DeveloperError,
+Event
 ```
 
 ##### \[\]
