@@ -17,10 +17,26 @@ var arrow = {
 }
 ```
 
-##### clearOne 
+##### clearOne
 
 ```
-
+clearOne: function() {
+	var $this = this;
+	this.handler.setInputAction(function(evt) { //单机开始绘制
+		var pick = viewer.scene.pick(evt.position);
+		if (Cesium.defined(pick) && pick.id) {
+			for (var i = 0; i < $this.drawArr.length; i++) {
+				if (pick.id.objId == $this.drawArr[i].objId) {
+					$this.drawArr[i].clear();
+					$this.drawArr.splice(i, 1);
+					break;
+				}
+			}
+			$this.handler.destroy();
+			$this.bindEdit();
+		}
+	}, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+},
 ```
 
 ##### bindEdit
