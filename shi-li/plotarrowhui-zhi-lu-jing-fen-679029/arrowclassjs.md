@@ -38,8 +38,11 @@ StraightArrow.prototype = {
 ##### startDraw
 
 * creatPoint ???
-
-
+* positions.length
+  * ==0 创建firstPoint floatPoint
+  * ==3 state = -1 
+  * arrowEntity ??
+* 
 ```
   startDraw: function() {
     var $this = this;
@@ -82,7 +85,7 @@ StraightArrow.prototype = {
         }
     }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
   },
-  ```
+```
 
 ##### disable -销毁当前绘制功能
 
