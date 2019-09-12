@@ -37,6 +37,8 @@ StraightArrow.prototype = {
 
 ##### startDraw
 
+* creatPoint ???
+* 
 ```
 startDraw: function() {
     var $this = this;
