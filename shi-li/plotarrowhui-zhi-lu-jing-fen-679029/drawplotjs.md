@@ -2,7 +2,10 @@
 
 ```
 var arrow = {
-    
+    isActivate: false,
+    drawArr: [],
+    handler: null,
+    viewer: null,
 }
 ```
 
