@@ -3,7 +3,7 @@
 ```
 var arrow = {
     isActivate: false, //是否激活状态
-    drawArr: [],
+    drawArr: [], //存储绘制对象
     handler: null,
     viewer: null,
     init: function(){},
