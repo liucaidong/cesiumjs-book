@@ -7,7 +7,7 @@ var arrow = {
     handler: null,
     viewer: null,
     init: function(){},
-
+    disable： function(){},
 }
 ```
 
