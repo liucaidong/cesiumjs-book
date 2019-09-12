@@ -33,60 +33,63 @@ StraightArrow.prototype = {
     disable: function(){},
     startDraw： function(){},
     startModify: function(){},//修改箭头
+    createByData: function(data){} //通过传入经纬度数组 构建箭头
 }
 ```
 
 ##### startModify
 
+* chickStep
+
 ```
 startModify: function() { //修改箭头
-	this.state = 2;
-	this.firstPoint.show = true;
-	this.floatPoint.show = true;
-	var $this = this;
-	this.clickStep = 0;
-	if (!this.modifyHandler) this.modifyHandler = new Cesium.ScreenSpaceEventHandler(this.viewer.scene.canvas);
-	this.modifyHandler.setInputAction(function(evt) { //单机开始绘制
-		var pick = $this.viewer.scene.pick(evt.position);
-		if (Cesium.defined(pick) && pick.id) {
-			$this.clickStep++;
-			if(!pick.id.objId) 
-				$this.selectPoint = pick.id;
-		} else { //激活移动点之后 单机面之外 移除这个事件
-			$this.modifyHandler.destroy(); 
-			$this.modifyHandler = null;
-			$this.firstPoint.show = false;
-			$this.floatPoint.show = false;
-			$this.state = -1;
-		}
-		if ($this.clickStep == 2) { //选中点后 第二次点击 则重新定位该点
-			$this.clickStep = 0;
-			$this.clickStep == 0;
-			var ray = $this.viewer.camera.getPickRay(evt.position);
-			if (!ray) return;
-			var cartesian = $this.viewer.scene.globe.pick(ray, $this.viewer.scene);
-			if($this.selectPoint){
-				$this.selectPoint.position.setValue(cartesian);
-				$this.selectPoint = null;
-			}
-			
-		};
-	}, Cesium.ScreenSpaceEventType.LEFT_CLICK);
-	this.modifyHandler.setInputAction(function(evt) { //单机开始绘制
-		var ray = $this.viewer.camera.getPickRay(evt.endPosition);
-		if (!ray) return;
-		var cartesian = $this.viewer.scene.globe.pick(ray, $this.viewer.scene);
-		if ($this.selectPoint) {
-			$this.selectPoint.position.setValue(cartesian);
-			if ($this.selectPoint.type == "firstPoint") {
-				$this.positions[1] = cartesian;
-			} else {
-				$this.positions[2] = cartesian;
-			}
-		} else {
-			return;
-		}
-	}, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
+    this.state = 2;
+    this.firstPoint.show = true;
+    this.floatPoint.show = true;
+    var $this = this;
+    this.clickStep = 0;
+    if (!this.modifyHandler) this.modifyHandler = new Cesium.ScreenSpaceEventHandler(this.viewer.scene.canvas);
+    this.modifyHandler.setInputAction(function(evt) { //单机开始绘制
+        var pick = $this.viewer.scene.pick(evt.position);
+        if (Cesium.defined(pick) && pick.id) {
+            $this.clickStep++;
+            if(!pick.id.objId) 
+                $this.selectPoint = pick.id;
+        } else { //激活移动点之后 单机面之外 移除这个事件
+            $this.modifyHandler.destroy(); 
+            $this.modifyHandler = null;
+            $this.firstPoint.show = false;
+            $this.floatPoint.show = false;
+            $this.state = -1;
+        }
+        if ($this.clickStep == 2) { //选中点后 第二次点击 则重新定位该点
+            $this.clickStep = 0;
+            $this.clickStep == 0;
+            var ray = $this.viewer.camera.getPickRay(evt.position);
+            if (!ray) return;
+            var cartesian = $this.viewer.scene.globe.pick(ray, $this.viewer.scene);
+            if($this.selectPoint){
+                $this.selectPoint.position.setValue(cartesian);
+                $this.selectPoint = null;
+            }
+
+        };
+    }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+    this.modifyHandler.setInputAction(function(evt) { //单机开始绘制
+        var ray = $this.viewer.camera.getPickRay(evt.endPosition);
+        if (!ray) return;
+        var cartesian = $this.viewer.scene.globe.pick(ray, $this.viewer.scene);
+        if ($this.selectPoint) {
+            $this.selectPoint.position.setValue(cartesian);
+            if ($this.selectPoint.type == "firstPoint") {
+                $this.positions[1] = cartesian;
+            } else {
+                $this.positions[2] = cartesian;
+            }
+        } else {
+            return;
+        }
+    }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
 },
 ```
 
