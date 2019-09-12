@@ -2,7 +2,7 @@
 
 ```
 var arrow = {
-    isActivate: false, 
+    isActivate: false, //是否激活状态
     drawArr: [],
     handler: null,
     viewer: null,
