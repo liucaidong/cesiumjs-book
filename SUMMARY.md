@@ -37,7 +37,7 @@
   * [js](js.md)
   * [Turf.js](sui-bi/turfjs.md)
   * [mysql](sui-bi/mysql.md)
-* 功能模块解析
+* [功能模块解析](gong-neng-mo-kuai-jie-xi.md)
   * [可编辑绘制](shi-li/ke-bian-ji-hui-zhi.md)
     * [参数表](shi-li/ke-bian-ji-hui-zhi/can-shu-biao.md)
     * [initialiseHandlers](shi-li/ke-bian-ji-hui-zhi/initialisehandlers.md)
@@ -51,6 +51,5 @@
     * [PolylinePrimitive](shi-li/shi-xian-xian/polylineprimitive.md)
     * [PolygonPrimtive](shi-li/shi-xian-xian/polygonprimtive.md)
     * [util](shi-li/shi-xian-xian/util.md)
-
-
+  * [plotArrow\(绘制路径分析\)](shi-li/plotarrowhui-zhi-lu-jing-fen-679029.md)
 
