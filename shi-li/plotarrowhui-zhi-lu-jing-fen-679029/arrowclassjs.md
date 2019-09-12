@@ -28,5 +28,11 @@ var StraightArrow = function(viewer) {
 
 ##### StraightArrow.prototype
 
+```
+StraightArrow.prototype = {
+    
+}
+```
+
 
 
