@@ -4,6 +4,8 @@
 
 从错误中, 我们看到是 一次插入的数据过大, 大于了设置的4M. 也提示了解决方案"Youcan change this value on the server by setting the max\_allowed\_packet'variable."
 
+需要修改mysql的 max\_allowed\_packet 参数
+
 * 解决方法
 
 ```
