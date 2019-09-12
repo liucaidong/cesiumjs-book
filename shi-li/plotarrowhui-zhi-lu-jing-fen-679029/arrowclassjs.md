@@ -43,7 +43,20 @@ StraightArrow.prototype = {
 }
 ```
 
-##### 
+##### createPoint
+
+```
+creatPoint: function(cartesian) {
+	return this.viewer.entities.add({
+		position: cartesian,
+		billboard: {
+			image: this.pointImageUrl,
+			verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+			heightReference: Cesium.HeightReference.CLAMP_TO_GROUND,
+		}
+	});
+},
+```
 
 ##### getLanlats
 
