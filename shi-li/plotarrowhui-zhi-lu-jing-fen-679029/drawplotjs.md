@@ -4,7 +4,7 @@
 var arrow = {
     isActivate: false, //是否激活状态
     drawArr: [], //存储绘制对象
-    handler: null,
+    handler: null, //地图事件处理程序
     viewer: null,
     init: function(){},
     disable： function(){},
