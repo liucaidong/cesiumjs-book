@@ -1,8 +1,10 @@
 ## push - pop
 
+positions=\[\],将最后一个替换成cartesian
+
 ```
 $this.positions.pop();
-					$this.positions.push(cartesian);
+$this.positions.push(cartesian);
 ```
 
 ## js调试 - debugger
