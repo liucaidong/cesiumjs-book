@@ -8,7 +8,7 @@ var arrow = {
     viewer: null,
     init: function(){},
     disable： function(){},
-
+    
 }
 ```
 
