@@ -11,7 +11,7 @@ var arrow = {
 }
 ```
 
-##### init
+##### init -初始化方法
 
 * 设置参数 isActivate,viewer
 * 执行this.bindEdit\(\)
