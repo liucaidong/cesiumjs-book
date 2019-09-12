@@ -14,6 +14,7 @@ var arrow = {
     nowArrowObj: null,
     bindEdit: function(){},
     clearOne: function(){},
+    clearAll: function(){}
 }
 ```
 
