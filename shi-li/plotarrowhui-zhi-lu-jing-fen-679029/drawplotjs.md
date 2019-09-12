@@ -14,9 +14,9 @@ var arrow = {
 
 #### 方法
 
-| init | 初始化方法 |
+| init | 初始化 |
 | :--- | :--- |
-| disable |  |
+| disable | 销毁 |
 
 ##### init -初始化方法
 
