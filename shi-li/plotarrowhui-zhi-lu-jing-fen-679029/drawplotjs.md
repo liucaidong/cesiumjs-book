@@ -20,6 +20,7 @@ var arrow = {
 ##### clearOne
 
 * clear ???
+* bindEdir\(\) 逻辑是什么?
 
 ```
 clearOne: function() {
