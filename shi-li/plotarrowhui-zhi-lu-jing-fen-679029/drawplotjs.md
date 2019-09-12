@@ -17,6 +17,12 @@ var arrow = {
 }
 ```
 
+##### clearOne 
+
+```
+
+```
+
 ##### bindEdit
 
 * debugger ???
