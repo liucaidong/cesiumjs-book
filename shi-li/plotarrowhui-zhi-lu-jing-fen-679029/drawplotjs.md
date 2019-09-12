@@ -6,7 +6,8 @@ var arrow = {
     drawArr: [],
     handler: null,
     viewer: null,
-    init: function(){}
+    init: function(){},
+    
 }
 ```
 
