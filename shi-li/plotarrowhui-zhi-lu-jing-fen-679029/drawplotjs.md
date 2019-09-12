@@ -15,6 +15,8 @@ var arrow = {
 
 ##### saveData -保存用户数据
 
+* getLenglats ?
+
 ```
 saveData: function() { //保存用户数据
     var jsonData = {
