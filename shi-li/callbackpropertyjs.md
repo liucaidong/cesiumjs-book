@@ -2,7 +2,9 @@
 
 ```
 define([],function(...){
+    'use strict';
     
+    function CallbackProperty(callback,isConstant){}
 });
 ```
 
