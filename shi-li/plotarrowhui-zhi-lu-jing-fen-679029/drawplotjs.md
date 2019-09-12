@@ -17,24 +17,24 @@ var arrow = {
 
 ```
 saveData: function() { //保存用户数据
-		var jsonData = {
-			straightArrowData: [],
-			attackArrowData: [],
-			pincerArrowData: []
-		}
-		for (var step = 0; step < this.drawArr.length; step++) {
-			var item = this.drawArr[step];
-			var positions = item.getLnglats();
-			if (item.type == "StraightArrow") {
-				jsonData.straightArrowData.push(positions);
-			} else if (item.type == "AttackArrow") {
-				jsonData.attackArrowData.push(positions);
-			} else {
-				jsonData.pincerArrowData.push(positions);
-			}
-		}
-		console.log("保存的数据：" + JSON.stringify(jsonData));
-	},
+    var jsonData = {
+        straightArrowData: [],
+        attackArrowData: [],
+        pincerArrowData: []
+    }
+    for (var step = 0; step < this.drawArr.length; step++) {
+        var item = this.drawArr[step];
+        var positions = item.getLnglats();
+        if (item.type == "StraightArrow") {
+            jsonData.straightArrowData.push(positions);
+        } else if (item.type == "AttackArrow") {
+            jsonData.attackArrowData.push(positions);
+        } else {
+            jsonData.pincerArrowData.push(positions);
+        }
+    }
+    console.log("保存的数据：" + JSON.stringify(jsonData));
+},
 ```
 
 ##### draw -开始绘制
