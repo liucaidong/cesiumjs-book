@@ -39,6 +39,19 @@ StraightArrow.prototype = {
 }
 ```
 
+##### getLanlats
+
+```
+getLnglats: function() {
+	var arr = [];
+	for (var i = 0; i < this.positions.length; i++) {
+		var item = this.cartesianToLatlng(this.positions[i]);
+		arr.push(item);
+	}
+	return arr;
+},
+```
+
 ##### clear
 
 ```
