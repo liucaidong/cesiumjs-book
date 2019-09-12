@@ -1,4 +1,4 @@
-## drwaPlot.js
+* ## drwaPlot.js
 
 ```
 var arrow = {
@@ -35,7 +35,7 @@ init: function(viewer) {
 
 ##### disable -销毁方法
 
-
+* 将drawArr handler viewer 等变量销毁
 
 ```
 disable: function() {
