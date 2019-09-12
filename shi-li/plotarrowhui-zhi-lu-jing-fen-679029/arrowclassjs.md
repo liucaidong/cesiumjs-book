@@ -37,6 +37,30 @@ StraightArrow.prototype = {
 }
 ```
 
+##### createByData
+
+```
+createByData: function(data) { //通过传入的经纬度数组 构建箭头
+	this.state = -1;
+	this.positions = [];
+	var arr = [];
+	for (var i = 0; i < data.length; i++) {
+		var cart3 = Cesium.Cartesian3.fromDegrees(data[i][0], data[i][1]);
+		arr.push(cart3);
+	}
+	this.positions = arr;
+	this.firstPoint = this.creatPoint(this.positions[1]);
+	this.firstPoint.type = "firstPoint";
+	this.floatPoint = this.creatPoint(this.positions[2]);
+	this.floatPoint.type = "floatPoint";
+	var $this = this;
+	this.arrowEntity = this.showArrowOnMap(this.positions);
+	this.firstPoint.show = false;
+	this.floatPoint.show = false;
+	this.arrowEntity.objId = this.objId;
+},
+```
+
 ##### startModify
 
 * chickStep
