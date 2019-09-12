@@ -40,6 +40,7 @@ StraightArrow.prototype = {
         return this.positions;
     },
     createPoint: function(){},
+    showArrowOnMap: function(){},
 }
 ```
 
@@ -47,14 +48,14 @@ StraightArrow.prototype = {
 
 ```
 creatPoint: function(cartesian) {
-	return this.viewer.entities.add({
-		position: cartesian,
-		billboard: {
-			image: this.pointImageUrl,
-			verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-			heightReference: Cesium.HeightReference.CLAMP_TO_GROUND,
-		}
-	});
+    return this.viewer.entities.add({
+        position: cartesian,
+        billboard: {
+            image: this.pointImageUrl,
+            verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+            heightReference: Cesium.HeightReference.CLAMP_TO_GROUND,
+        }
+    });
 },
 ```
 
