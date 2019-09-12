@@ -5,8 +5,10 @@ define([],function(...){
     'use strict';
 
     function CallbackProperty(callback,isConstant){}
-    
+
     defineProperties();
+    
+    CallbackProperty.prototype.getValue = function(time,result){}
 });
 ```
 
