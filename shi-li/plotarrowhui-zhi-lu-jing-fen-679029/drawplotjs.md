@@ -35,6 +35,8 @@ init: function(viewer) {
 
 ##### disable -销毁方法
 
+
+
 ```
 disable: function() {
     if (this.isActivate) {
