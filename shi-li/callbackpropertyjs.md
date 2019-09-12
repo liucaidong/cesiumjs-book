@@ -16,6 +16,14 @@ define([],function(...){
 });
 ```
 
+##### equals 
+
+```
+CallbackProperty.prototype.equals = function(other) {
+    return this === other || (other instanceof CallbackProperty && this._callback === other._callback && this._isConstant === other._isConstant);
+};
+```
+
 ##### setCallback
 
 ```
