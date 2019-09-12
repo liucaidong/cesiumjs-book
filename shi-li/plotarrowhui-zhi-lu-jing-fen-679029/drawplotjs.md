@@ -20,6 +20,7 @@ var arrow = {
 
 * debugger ???
 * nowArrowObj ???
+* startModiry\(\) ???
 
 ```
 bindEdit: function() {
