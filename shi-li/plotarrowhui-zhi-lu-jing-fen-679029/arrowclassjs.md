@@ -1,6 +1,6 @@
 ## arrowClass.js
 
-#### StraightArrow
+#### StraightArrow -直线路径
 
 ```
 var StraightArrow = function(viewer) {
