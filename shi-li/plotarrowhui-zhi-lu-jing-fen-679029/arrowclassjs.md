@@ -26,5 +26,7 @@ var StraightArrow = function(viewer) {
 }
 ```
 
+##### StraightArrow.prototype
+
 
 
