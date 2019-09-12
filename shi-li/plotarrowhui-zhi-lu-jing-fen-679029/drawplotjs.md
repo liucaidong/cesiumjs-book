@@ -14,6 +14,10 @@ var arrow = {
 }
 ```
 
+##### showData
+
+
+
 ##### saveData -保存用户数据
 
 * getLenglats ?
