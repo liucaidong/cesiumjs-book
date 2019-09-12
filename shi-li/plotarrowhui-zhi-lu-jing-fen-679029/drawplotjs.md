@@ -9,10 +9,9 @@ var arrow = {
     init: function(){},
     disable： function(){},
     draw: function(){},
+    
 }
 ```
-
-
 
 ##### draw -开始绘制
 
