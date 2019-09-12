@@ -33,7 +33,7 @@ init: function(viewer) {
 },
 ```
 
-##### disable
+##### disable -销毁方法
 
 ```
 disable: function() {
