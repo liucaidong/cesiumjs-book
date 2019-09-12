@@ -3,9 +3,20 @@
 ```
 define([],function(...){
     'use strict';
-    
+
     function CallbackProperty(callback,isConstant){}
 });
+```
+
+##### CallbackProperty
+
+```
+function CallbackProperty(callback, isConstant) {
+    this._callback = undefined;
+    this._isConstant = undefined;
+    this._definitionChanged = new Event();
+    this.setCallback(callback, isConstant);
+}
 ```
 
 ##### ...
