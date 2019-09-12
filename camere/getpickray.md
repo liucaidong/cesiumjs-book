@@ -9,5 +9,16 @@
 
 返回Cartesian3光线的位置和方向。
 
+# Ray
+
+new Cesium.Ray\(origin, direction\)
+
+表示在提供的方向上从提供的原点无限延伸的光线。
+
+| 名称 | 类型 | 默认 | 描述 |
+| :--- | :--- | :--- | :--- |
+| `origin` | [Cartesian3](https://cesiumjs.org/Cesium/Build/Documentation/Cartesian3.html) | `Cartesian3.ZERO` | 可选光线的原点。 |
+| `direction` | [Cartesian3](https://cesiumjs.org/Cesium/Build/Documentation/Cartesian3.html) | `Cartesian3.ZERO` | 可选射线的方向。 |
+
 
 
