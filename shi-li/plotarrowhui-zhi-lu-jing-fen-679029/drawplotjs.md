@@ -11,7 +11,7 @@ var arrow = {
     draw: function(){},
     saveData: function(){},
     showData: function(){},
-    nowArrowObj: null,
+    nowArrowObj: null,  // ？？？
     bindEdit: function(){},
     clearOne: function(){},
     clearAll: function(){}
