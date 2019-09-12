@@ -13,7 +13,7 @@ var arrow = {
 }
 ```
 
-##### saveData
+##### saveData -保存用户数据
 
 ```
 saveData: function() { //保存用户数据
