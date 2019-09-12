@@ -10,6 +10,7 @@ var arrow = {
     disable： function(){},
     draw: function(){},
     saveData: function(){},
+    
 }
 ```
 
