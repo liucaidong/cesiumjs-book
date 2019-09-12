@@ -9,6 +9,10 @@ define([],function(...){
     defineProperties();
 
     CallbackProperty.prototype.getValue = function(time,result){}
+    
+    CallbackProperty.prototype.setCallback =function(callback,isConstant);
+    
+    
 });
 ```
 
