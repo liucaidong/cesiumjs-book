@@ -55,5 +55,5 @@
     * [algorithm.js](shi-li/plotarrowhui-zhi-lu-jing-fen-679029/algorithmjs.md)
     * [arrowClass.js](shi-li/plotarrowhui-zhi-lu-jing-fen-679029/arrowclassjs.md)
     * [drawPlot.js](shi-li/plotarrowhui-zhi-lu-jing-fen-679029/drawplotjs.md)
-    * plotUtil.js
+    * [plotUtil.js](shi-li/plotarrowhui-zhi-lu-jing-fen-679029/plotutiljs.md)
 
