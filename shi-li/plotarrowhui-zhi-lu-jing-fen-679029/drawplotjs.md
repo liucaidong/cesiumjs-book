@@ -18,6 +18,10 @@ var arrow = {
 | :--- | :--- |
 | disable | 销毁 |
 
+##### draw
+
+
+
 ##### init -初始化方法
 
 * 设置参数 isActivate,viewer
