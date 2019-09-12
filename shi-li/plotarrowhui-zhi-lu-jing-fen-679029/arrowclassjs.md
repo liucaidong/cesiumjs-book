@@ -38,6 +38,18 @@ StraightArrow.prototype = {
 }
 ```
 
+##### clear
+
+```
+clear: function() { //清除绘制箭头
+    this.state = 0;
+    if (this.firstPoint) this.viewer.entities.remove(this.firstPoint);
+    if (this.floatPoint) this.viewer.entities.remove(this.floatPoint);
+    if (this.arrowEntity) this.viewer.entities.remove(this.arrowEntity);
+    this.state = -1;
+},
+```
+
 ##### createByData
 
 * createPoint ???
