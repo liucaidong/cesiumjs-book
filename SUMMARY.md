@@ -7,6 +7,7 @@
   * [三维模型\(Entity&Primitive\)](san-wei-mo-578b28-entity-and-primitive.md)
   * [camere\(相机\)](camere.md)
     * [pickEllipsoid](camere/pickellipsoid.md)
+    * [getPickRay](camere/getpickray.md)
   * [Entity\(实体实例\)](entity.md)
     * [PolylineGraphics\(折线\)](entity/polylinegraphicszhe-7ebf29.md)
     * [RectangleGraphics](entity/rectanglegraphics.md)
