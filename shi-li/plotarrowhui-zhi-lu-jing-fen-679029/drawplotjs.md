@@ -13,7 +13,8 @@ var arrow = {
 
 ##### init
 
-
+* 设置isActivate,viewer
+* 执行this.bindEdit\(\)
 
 ```
 init: function(viewer) {
