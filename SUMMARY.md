@@ -54,4 +54,5 @@
   * [\(绘制路径分析\)](shi-li/plotarrowhui-zhi-lu-jing-fen-679029.md)
     * [algorithm.js](shi-li/plotarrowhui-zhi-lu-jing-fen-679029/algorithmjs.md)
     * [arrowClass.js](shi-li/plotarrowhui-zhi-lu-jing-fen-679029/arrowclassjs.md)
+    * drawPlot.js
 
