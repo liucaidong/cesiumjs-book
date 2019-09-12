@@ -35,49 +35,49 @@ StraightArrow.prototype = {
 }
 ```
 
-##### startDraw 
+##### startDraw
 
 ```
 startDraw: function() {
-	var $this = this;
-	this.state = 1;
-	this.handler.setInputAction(function(evt) { //单机开始绘制
-		var ray = viewer.camera.getPickRay(evt.position);
-		if (!ray) return;
-		var cartesian = viewer.scene.globe.pick(ray, $this.viewer.scene);
-		if ($this.positions.length == 0) {
-			$this.firstPoint = $this.creatPoint(cartesian);
-			$this.firstPoint.type = "firstPoint";
-			$this.floatPoint = $this.creatPoint(cartesian);
-			$this.floatPoint.type = "floatPoint";
-			$this.positions.push(cartesian);
-		}
-		if ($this.positions.length == 3) {
-			$this.firstPoint.show = false;
-			$this.floatPoint.show = false;
-			$this.handler.destroy();
-			$this.arrowEntity.objId = $this.objId;
-			$this.state = -1;
-		}
-		$this.positions.push(cartesian.clone());
-	}, Cesium.ScreenSpaceEventType.LEFT_CLICK);
-	this.handler.setInputAction(function(evt) { //移动时绘制面
-		if ($this.positions.length < 1) return;
-		var ray = viewer.camera.getPickRay(evt.endPosition);
-		if (!ray) return;
-		var cartesian = viewer.scene.globe.pick(ray, $this.viewer.scene);
-		$this.floatPoint.position.setValue(cartesian);
-		if ($this.positions.length >= 2) {
-			if (!Cesium.defined($this.arrowEntity)) {
-				$this.positions.push(cartesian);
-				$this.arrowEntity = $this.showArrowOnMap($this.positions);
+    var $this = this;
+    this.state = 1; //状态
+    this.handler.setInputAction(function(evt) { //单机开始绘制
+        var ray = viewer.camera.getPickRay(evt.position);
+        if (!ray) return;
+        var cartesian = viewer.scene.globe.pick(ray, $this.viewer.scene);
+        if ($this.positions.length == 0) {
+            $this.firstPoint = $this.creatPoint(cartesian);
+            $this.firstPoint.type = "firstPoint";
+            $this.floatPoint = $this.creatPoint(cartesian);
+            $this.floatPoint.type = "floatPoint";
+            $this.positions.push(cartesian);
+        }
+        if ($this.positions.length == 3) {
+            $this.firstPoint.show = false;
+            $this.floatPoint.show = false;
+            $this.handler.destroy();
+            $this.arrowEntity.objId = $this.objId;
+            $this.state = -1;
+        }
+        $this.positions.push(cartesian.clone());
+    }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+    this.handler.setInputAction(function(evt) { //移动时绘制面
+        if ($this.positions.length < 1) return;
+        var ray = viewer.camera.getPickRay(evt.endPosition);
+        if (!ray) return;
+        var cartesian = viewer.scene.globe.pick(ray, $this.viewer.scene);
+        $this.floatPoint.position.setValue(cartesian);
+        if ($this.positions.length >= 2) {
+            if (!Cesium.defined($this.arrowEntity)) {
+                $this.positions.push(cartesian);
+                $this.arrowEntity = $this.showArrowOnMap($this.positions);
 
-			} else {
-				$this.positions.pop();
-				$this.positions.push(cartesian);
-			}
-		}
-	}, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
+            } else {
+                $this.positions.pop();
+                $this.positions.push(cartesian);
+            }
+        }
+    }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
 },
 ```
 
