@@ -38,9 +38,10 @@ StraightArrow.prototype = {
 ##### startDraw
 
 * creatPoint ???
-* 
+
+
 ```
-startDraw: function() {
+  startDraw: function() {
     var $this = this;
     this.state = 1; //状态
     this.handler.setInputAction(function(evt) { //单机开始绘制
@@ -80,8 +81,8 @@ startDraw: function() {
             }
         }
     }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
-},
-```
+  },
+  ```
 
 ##### disable -销毁当前绘制功能
 
