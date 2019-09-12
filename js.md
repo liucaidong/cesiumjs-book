@@ -1,3 +1,5 @@
+yi
+
 ```
 addListener事件监听
 ```
@@ -16,7 +18,7 @@ btn.addEventListener("click",function () {
 # js判断数组中是否存在某个值
 
 ```
-$.inArray(item,items) == -1 
+$.inArray(item,items) == -1
 ```
 
 ```
