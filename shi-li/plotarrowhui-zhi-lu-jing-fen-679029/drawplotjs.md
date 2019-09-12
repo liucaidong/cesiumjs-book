@@ -36,6 +36,21 @@ init: function(viewer) {
 ##### disable
 
 ```
-
+disable: function() {
+	if (this.isActivate) {
+		this.isActivate = false;
+		for (var i = 0; i < this.drawArr.length; i++) {
+			this.drawArr[i].disable();
+		}
+		this.drawArr = [];
+		if (this.handler) {
+			this.handler.destroy();
+			this.handler = null;
+		}
+		this.viewer = null;
+	}
+},
 ```
+
+
 
