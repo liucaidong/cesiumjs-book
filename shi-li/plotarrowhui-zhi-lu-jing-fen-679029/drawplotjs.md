@@ -12,7 +12,7 @@ var arrow = {
     saveData: function(){},
     showData: function(){},
     nowArrowObj: null,
-    
+    bindEdit: function(){},
 }
 ```
 
