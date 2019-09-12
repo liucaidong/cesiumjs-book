@@ -18,6 +18,10 @@ var arrow = {
 }
 ```
 
+##### clearAll 
+
+
+
 ##### clearOne
 
 * clear ???
