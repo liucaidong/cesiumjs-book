@@ -22,25 +22,25 @@ var arrow = {
 
 ```
 draw: function(type) {
-		switch (type) {
-			case "straightArrow":
-				var straightArrow = new StraightArrow(viewer);
-				straightArrow.startDraw();
-				this.drawArr.push(straightArrow);
-				break;
-			case "attackArrow":
-				var attackArrow = new AttackArrow(viewer);
-				attackArrow.startDraw();
-				this.drawArr.push(attackArrow);
-				break;
-			case "pincerArrow":
-				var pincerArrow = new PincerArrow(viewer);
-				pincerArrow.startDraw();
-				this.drawArr.push(pincerArrow);
-			default:
-				break;
-		}
-	},
+    switch (type) {
+        case "straightArrow":
+            var straightArrow = new StraightArrow(viewer);
+            straightArrow.startDraw();
+            this.drawArr.push(straightArrow);
+            break;
+        case "attackArrow":
+            var attackArrow = new AttackArrow(viewer);
+            attackArrow.startDraw();
+            this.drawArr.push(attackArrow);
+            break;
+        case "pincerArrow":
+            var pincerArrow = new PincerArrow(viewer);
+            pincerArrow.startDraw();
+            this.drawArr.push(pincerArrow);
+        default:
+            break;
+    }
+},
 ```
 
 ##### init -初始化方法
