@@ -11,8 +11,12 @@ var arrow = {
     draw: function(){},
     saveData: function(){},
     showData: function(){},
+    nowArrowObj: null,
+    
 }
 ```
+
+##### 
 
 ##### showData ???
 
