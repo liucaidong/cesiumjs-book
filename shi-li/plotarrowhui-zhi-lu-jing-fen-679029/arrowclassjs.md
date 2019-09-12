@@ -42,7 +42,7 @@ StraightArrow.prototype = {
   * ==0 创建firstPoint floatPoint
   * ==3 state = -1 
   * arrowEntity ??
-* showArrowOnMap\(\)
+* showArrowOnMap\(\) ???
 
 ```
   startDraw: function() {
