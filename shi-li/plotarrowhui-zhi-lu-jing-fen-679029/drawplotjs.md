@@ -19,6 +19,7 @@ var arrow = {
 ##### bindEdit
 
 * debugger ???
+* nowArrowObj ???
 
 ```
 bindEdit: function() {
