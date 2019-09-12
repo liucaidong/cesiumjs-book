@@ -16,7 +16,36 @@ var arrow = {
 
 ##### showData
 
-
+```
+showData: function(jsonData) { //展示用户保存的数据
+	if(!jsonData) return ;
+	var straightArrowArr = jsonData.straightArrowData;
+	var attackArrowArr = jsonData.attackArrowData;
+	var pincerArrowArr = jsonData.pincerArrowData;
+	//展示直线箭头
+	for(var i=0;i<straightArrowArr.length;i++){
+		var item = straightArrowArr[i];
+		var straightArrow = new StraightArrow(viewer);
+		straightArrow.createByData(item);
+		this.drawArr.push(straightArrow);
+	}
+	//展示攻击箭头
+	for(var j=0;j<attackArrowArr.length;j++){
+		var item = attackArrowArr[j];
+		var attackArrow = new AttackArrow(viewer);
+		attackArrow.createByData(item);
+		this.drawArr.push(attackArrow);
+	}
+	//展示钳击箭头
+	for(var z=0;z<pincerArrowArr.length;z++){
+		var item = pincerArrowArr[z];
+		var pincerArrow = new PincerArrow(viewer);
+		pincerArrow.createByData(item);
+		this.drawArr.push(pincerArrow);
+	}
+	
+},
+```
 
 ##### saveData -保存用户数据
 
