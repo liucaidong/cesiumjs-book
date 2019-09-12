@@ -12,7 +12,7 @@ define([],function(...){
 
     CallbackProperty.prototype.setCallback =function(callback,isConstant);
 
-    
+    CallbackProperty.prototype.equals = function(other){}
 });
 ```
 
