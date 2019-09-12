@@ -13,13 +13,15 @@ var arrow = {
 
 ##### init
 
+
+
 ```
 init: function(viewer) {
-	if (!this.isActivate) {
-		this.isActivate = true;
-		this.viewer = viewer;
-		this.bindEdit();
-	}
+    if (!this.isActivate) {
+        this.isActivate = true;
+        this.viewer = viewer;
+        this.bindEdit();
+    }
 },
 ```
 
