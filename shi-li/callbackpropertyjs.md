@@ -7,9 +7,17 @@ define([],function(...){
     function CallbackProperty(callback,isConstant){}
 
     defineProperties();
-    
+
     CallbackProperty.prototype.getValue = function(time,result){}
 });
+```
+
+##### getValue
+
+```
+CallbackProperty.prototype.getValue = function(time, result) {
+    return this._callback(time, result);
+};
 ```
 
 ##### defineProperties
