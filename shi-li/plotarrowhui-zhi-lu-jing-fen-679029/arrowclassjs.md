@@ -40,6 +40,8 @@ StraightArrow.prototype = {
 }
 ```
 
+##### 
+
 ##### getLanlats
 
 * cartesianToLatlng\(\)
