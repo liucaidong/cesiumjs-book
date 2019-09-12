@@ -8,9 +8,11 @@ var arrow = {
     viewer: null,
     init: function(){},
     disable： function(){},
-    
+
 }
 ```
+
+##### 
 
 ##### init -初始化方法
 
