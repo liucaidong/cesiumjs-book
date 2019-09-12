@@ -35,6 +35,7 @@ StraightArrow.prototype = {
     startModify: function(){},//修改箭头
     createByData: function(data){} //通过传入经纬度数组 构建箭头
     clear: function(){} //清除绘制箭头
+    getLanlats: function(){}
 }
 ```
 
