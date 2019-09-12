@@ -44,6 +44,37 @@ StraightArrow.prototype = {
 }
 ```
 
+##### showArrowOnMap
+
+```
+showArrowOnMap: function(positions) {
+	var $this = this;
+	var update = function() {
+		if (positions.length < 2) {
+			return null;
+		}
+		var p1 = positions[1];
+		var p2 = positions[2];
+		var firstPoint = $this.cartesianToLatlng(p1);
+		var endPoints = $this.cartesianToLatlng(p2);
+		var arrow = [];
+		var res = xp.algorithm.fineArrow([firstPoint[0], firstPoint[1]], [endPoints[0], endPoints[1]]);
+		var index = JSON.stringify(res).indexOf("null");
+		if (index == -1) arrow = res;
+		return arrow;
+	}
+	return this.viewer.entities.add({
+		polygon: new Cesium.PolygonGraphics({
+			hierarchy: new Cesium.CallbackProperty(update, false),
+			clampToGround: true,
+			show: true,
+			fill: true,
+			material: $this.fillMaterial
+		})
+	});
+},
+```
+
 ##### createPoint
 
 ```
