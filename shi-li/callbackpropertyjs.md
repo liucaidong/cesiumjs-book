@@ -13,10 +13,12 @@ define([],function(...){
     CallbackProperty.prototype.setCallback =function(callback,isConstant);
 
     CallbackProperty.prototype.equals = function(other){}
+    
+    return CallbackProperty;
 });
 ```
 
-##### equals 
+##### equals
 
 ```
 CallbackProperty.prototype.equals = function(other) {
