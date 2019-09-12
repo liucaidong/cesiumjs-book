@@ -30,8 +30,42 @@ var StraightArrow = function(viewer) {
 
 ```
 StraightArrow.prototype = {
-    disable: function(){}
+    disable: function(){},
 }
+```
+
+##### disable
+
+```
+disable: function() {
+	this.positions = [];
+	if (this.firstPoint) {
+		this.viewer.entities.remove(this.firstPoint);
+		this.firstPoint = null;
+	}
+	if (this.floatPoint) {
+		this.viewer.entities.remove(this.floatPoint);
+		this.floatPoint = null;
+	}
+	if (this.arrowEntity) {
+		this.viewer.entities.remove(this.arrowEntity);
+		this.arrowEntity = null;
+	}
+	this.state = -1;
+	if (this.handler) {
+		this.handler.destroy();
+		this.handler = new Cesium.ScreenSpaceEventHandler(this.viewer.scene.canvas);
+	}
+	if (this.selectPoint) {
+		this.viewer.entities.remove(this.selectPoint);
+		this.selectPoint = null;
+	}
+	if (this.modifyHandler) {
+		this.modifyHandler.destroy();
+		this.modifyHandler = null;
+	}
+	this.clickStep = 0;
+},
 ```
 
 
