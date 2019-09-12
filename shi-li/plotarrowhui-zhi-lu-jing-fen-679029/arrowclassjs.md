@@ -31,6 +31,7 @@ var StraightArrow = function(viewer) {
 ```
 StraightArrow.prototype = {
     disable: function(){},
+    startDraw： function(){},
 }
 ```
 
