@@ -13,6 +13,7 @@ var arrow = {
     showData: function(){},
     nowArrowObj: null,
     bindEdit: function(){},
+    clearOne: function(){}
 }
 ```
 
