@@ -7,11 +7,11 @@
 * 解决方法
 
 ```
-show VARIABLES like'%max_allowed_packet%';
+查看配置：show VARIABLES like'%max_allowed_packet%';
 
 1.  临时更改
  set global max_allowed_packet =2*1024*1024*10;
- 
+
 2.  永久更改
  修改配置文件
  max_allowed_packet=20M
