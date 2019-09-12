@@ -39,6 +39,7 @@ StraightArrow.prototype = {
     getPositions: function(){
         return this.positions;
     },
+    createPoint: function(){},
 }
 ```
 
