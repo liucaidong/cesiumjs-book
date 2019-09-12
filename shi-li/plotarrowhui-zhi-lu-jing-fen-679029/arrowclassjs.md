@@ -30,8 +30,7 @@ var StraightArrow = function(viewer) {
 
 ```
 StraightArrow.prototype = {
-    this.positions = [],
-    
+    disable: function(){}
 }
 ```
 
