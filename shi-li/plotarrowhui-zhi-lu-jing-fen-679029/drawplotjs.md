@@ -1,4 +1,4 @@
-* ## drwaPlot.js
+## drwaPlot.js
 
 ```
 var arrow = {
