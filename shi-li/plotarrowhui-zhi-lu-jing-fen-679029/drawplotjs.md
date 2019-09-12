@@ -18,7 +18,9 @@ var arrow = {
 | :--- | :--- |
 | disable | 销毁 |
 
-##### draw
+##### draw -开始绘制
+
+* 声明对应的路径绘制对象
 
 ```
 draw: function(type) {
