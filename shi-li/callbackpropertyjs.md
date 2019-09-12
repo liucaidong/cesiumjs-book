@@ -9,11 +9,35 @@ define([],function(...){
     defineProperties();
 
     CallbackProperty.prototype.getValue = function(time,result){}
-    
+
     CallbackProperty.prototype.setCallback =function(callback,isConstant);
-    
-    
+
+
 });
+```
+
+##### setCallback
+
+```
+CallbackProperty.prototype.setCallback = function(callback, isConstant) {
+    //>>includeStart('debug', pragmas.debug);
+    if (!defined(callback)) {
+        throw new DeveloperError('callback is required.');
+    }
+    if (!defined(isConstant)) {
+        throw new DeveloperError('isConstant is required.');
+    }
+    //>>includeEnd('debug');
+
+    var changed = this._callback !== callback || this._isConstant !== isConstant;
+
+    this._callback = callback;
+    this._isConstant = isConstant;
+
+    if (changed) {
+        this._definitionChanged.raiseEvent(this);
+    }
+};
 ```
 
 ##### getValue
