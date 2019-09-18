@@ -1,4 +1,7 @@
-##### 
+# Three.js
+
+* 这是Three.js系列文章的第一篇。 Three.js是一个尽可能简化在网页端获取3D 内容的库。
+* Three.js经常会和WebGL混淆， 但也并不总是,three.js其实是使用WebGL来绘制三维效果的
 
 ##### 需要深入学习mysql
 
