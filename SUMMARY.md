@@ -24,7 +24,7 @@
     * [Cartographic](cartographic.md)
     * [Rectangle](rectangle.md)
     * [Cartesian3](cartesian3.md)
-  * property
+  * [property](property.md)
   * [EntityCollection\(实体几何\)](entitycollection.md)
   * [PolylineGeometry\(折线建模\)](polylinegeometry.md)
 * [实例](shi-li.md)
@@ -60,6 +60,4 @@
     * [plotUtil.js](shi-li/plotarrowhui-zhi-lu-jing-fen-679029/plotutiljs.md)
   * [CallbackProperty.js](shi-li/callbackpropertyjs.md)
   * [defineProperties.js](shi-li/definepropertiesjs.md)
-
-
 
