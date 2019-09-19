@@ -1,7 +1,7 @@
 # Summary
 
 * [Cesium](README.md)
-* [概念](gai-nian.md)
+* [原理](gai-nian.md)
 * [基础](ji-chu-pian.md)
   * [影像服务&地形服务](ying-xiang-fu-52a126-di-xing-fu-wu.md)
   * [三维模型\(Entity&Primitive\)](san-wei-mo-578b28-entity-and-primitive.md)
@@ -60,3 +60,4 @@
     * [plotUtil.js](shi-li/plotarrowhui-zhi-lu-jing-fen-679029/plotutiljs.md)
   * [CallbackProperty.js](shi-li/callbackpropertyjs.md)
   * [defineProperties.js](shi-li/definepropertiesjs.md)
+
