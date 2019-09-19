@@ -10,7 +10,13 @@
 
 #### 实例
 
-
+```
+material : new Cesium.PolylineOutlineMaterialProperty({
+    color : Cesium.Color.ORANGE,
+    outlineWidth : 2,
+    outlineColor : Cesium.Color.BLACK
+})
+```
 
 
 
