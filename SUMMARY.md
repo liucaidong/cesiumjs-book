@@ -1,7 +1,7 @@
 # Summary
 
 * [Cesium](README.md)
-* [概念](gai-nian.md)
+* [原理](gai-nian.md)
 * [基础](ji-chu-pian.md)
   * [影像服务&地形服务](ying-xiang-fu-52a126-di-xing-fu-wu.md)
   * [三维模型\(Entity&Primitive\)](san-wei-mo-578b28-entity-and-primitive.md)
@@ -32,8 +32,6 @@
   * [提示框](shi-li/ti-shi-kuang.md)
   * [绘制点](shi-li/hui-zhi-dian.md)
   * [绘制广告牌](shi-li/hui-zhi-guang-gao-pai.md)
-* [项目遇到的坑](keng.md)
-  * [mysql](keng/mysql.md)
 * [随笔](sui-bi.md)
   * [prototype-new](sui-bi/prototype-new.md)
   * [js](js.md)
@@ -60,4 +58,6 @@
     * [plotUtil.js](shi-li/plotarrowhui-zhi-lu-jing-fen-679029/plotutiljs.md)
   * [CallbackProperty.js](shi-li/callbackpropertyjs.md)
   * [defineProperties.js](shi-li/definepropertiesjs.md)
+* [项目遇到的坑](keng.md)
+  * [mysql](keng/mysql.md)
 
