@@ -5,6 +5,7 @@
   * [材质\(Fabric\)](gai-nian/cai-8d2828-fabric.md)
     * [CheckerboardMaterialProperty](gai-nian/cai-8d2828-fabric/checkerboardmaterialproperty.md)
     * [PolylineGlowMaterialProperty](gai-nian/cai-8d2828-fabric/polylineglowmaterialproperty.md)
+    * [PolylineOutlineMaterialProperty](gai-nian/cai-8d2828-fabric/polylineoutlinematerialproperty.md)
   * [其他](gai-nian/arctype.md)
 * [基础](ji-chu-pian.md)
   * [影像服务&地形服务](ying-xiang-fu-52a126-di-xing-fu-wu.md)
