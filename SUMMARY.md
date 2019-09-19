@@ -22,7 +22,7 @@
     * [LabelGraphics](entity/labelgraphics.md)
     * [BillboardGraphics](entity/billboardgraphics.md)
     * [PolygonGraphics](entity/polygongraphics.md)
-    * ModelGraphics\(3d模型\)
+    * [ModelGraphics\(3d模型\)](entity/modelgraphics3dmo-578b29.md)
   * [Primitive\(几何体\)](primitiveji-he-4f5329.md)
     * [GeometryInstance\(几何实例\)](geometryinstance.md)
     * [primitive实例](primitiveshi-li.md)
