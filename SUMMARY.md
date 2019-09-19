@@ -4,7 +4,7 @@
 * [原理](gai-nian.md)
   * [材质\(Fabric\)](gai-nian/cai-8d2828-fabric.md)
     * CheckerboardMaterialProperty
-  * ArcType
+  * [ArcType](gai-nian/arctype.md)
 * [基础](ji-chu-pian.md)
   * [影像服务&地形服务](ying-xiang-fu-52a126-di-xing-fu-wu.md)
   * [三维模型\(Entity&Primitive\)](san-wei-mo-578b28-entity-and-primitive.md)
