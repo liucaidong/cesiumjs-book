@@ -18,6 +18,18 @@
 | :--- | :--- | :--- | :--- |
 
 
+#### 属性
+
+#### surfaceDistance {#surfaceDistance}
+
+获取起点和终点之间的表面距离
+
+```
+//获取两点之间的距离
+geodesic.setEndPoints(startCartographic, endCartographic);
+var lengthInMeters = Math.round(geodesic.surfaceDistance);
+```
+
 #### 方法
 
 #### interpolateUsingFraction（fraction，result） {#interpolateUsingFraction}
