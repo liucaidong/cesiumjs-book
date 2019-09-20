@@ -8,6 +8,10 @@
 | `secondsOfDay` | 数 | `0.0` | optional当前Julian Day Number的秒数。将正确处理大于一天的小数秒，负秒和秒。 |
 | `timeStandard` | [TimeStandard](https://cesiumjs.org/Cesium/Build/Documentation/TimeStandard.html) | `TimeStandard.UTC` | optional定义前两个参数的时间标准。 |
 
+#### 注意
+
+1. viewer.clock.shouldAnimate = true;  必须
+
 #### 方法
 
 #### secondsDifference {#.secondsDifference}
