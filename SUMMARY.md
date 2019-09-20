@@ -31,6 +31,7 @@
     * [primitive实例](primitiveshi-li.md)
   * [scene](scene.md)
     * [pick](scene/pick.md)
+    * [canvas](scene/canvas.md)
   * [坐标](zuo-biao.md)
     * [Cartographic](cartographic.md)
     * [Rectangle](rectangle.md)
