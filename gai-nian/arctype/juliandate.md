@@ -8,5 +8,27 @@
 | `secondsOfDay` | 数 | `0.0` | optional当前Julian Day Number的秒数。将正确处理大于一天的小数秒，负秒和秒。 |
 | `timeStandard` | [TimeStandard](https://cesiumjs.org/Cesium/Build/Documentation/TimeStandard.html) | `TimeStandard.UTC` | optional定义前两个参数的时间标准。 |
 
+#### 方法
+
+#### secondsDifference {#.secondsDifference}
+
+Cesium.JulianDate.secondsDifference\(left, right\) → Number
+
+计算提供的实例之间的秒数差异。
+
+```
+Cesium.JulianDate.secondsDifference(time, startTime);
+```
+
+#### now {#.now}
+
+Cesium.JulianDate.now （result） → JulianDate
+
+创建表示当前系统时间的新实例
+
+```
+var startTime = Cesium.JulianDate.now();
+```
+
 
 
