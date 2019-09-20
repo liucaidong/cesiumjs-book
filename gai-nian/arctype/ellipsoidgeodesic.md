@@ -35,6 +35,8 @@
 
 ```
 //实例：获得两点之间的中点位置
+var scratch = new Cesium.Cartographic();
+var geodesic = new Cesium.EllipsoidGeodesic();
 geodesic.setEndPoints(startCartographic, endCartographic);
 var midpointCartographic = geodesic.interpolateUsingFraction(0.5, scratch);
 return Cesium.Cartesian3.fromRadians(midpointCartographic.longitude, midpointCartographic.latitude);
