@@ -10,7 +10,15 @@
 
 * 翻译：相机
 
+#### 事件
 
+#### changed {#changed}
+
+获取摄像机更改后将引发的事件percentageChanged。
+
+```
+view3D.camera.changed.addEventListener(sync2DView);
+```
 
 
 
