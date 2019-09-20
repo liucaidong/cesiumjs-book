@@ -12,5 +12,11 @@ new Cesium.Cartesian3(x, y, z)
 | `y` | 数 | `0.0` | 可选Y组件。 |
 | `z` | 数 | `0.0` | 可选Z组件。 |
 
+#### 属性
 
+#### distance {#.distance}
+
+Cesium.Cartesian3.distance\(left, right\) → Number
+
+计算两点之间的距离。
 
