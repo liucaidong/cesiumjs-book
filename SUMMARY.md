@@ -11,7 +11,7 @@
   * [其他](gai-nian/arctype.md)
     * [EllipsoidGeodesic](gai-nian/arctype/ellipsoidgeodesic.md)
     * [JulianDate](gai-nian/arctype/juliandate.md)
-    * PinBuilder
+    * [PinBuilder](gai-nian/arctype/pinbuilder.md)
 * [基础](ji-chu-pian.md)
   * [影像服务&地形服务](ying-xiang-fu-52a126-di-xing-fu-wu.md)
   * [三维模型\(Entity&Primitive\)](san-wei-mo-578b28-entity-and-primitive.md)
