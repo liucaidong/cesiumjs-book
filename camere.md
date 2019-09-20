@@ -20,5 +20,17 @@
 view3D.camera.changed.addEventListener(sync2DView);
 ```
 
+#### 属性
+
+#### percentageChanged {#percentageChanged}
+
+在changed事件发生之前相机必须更改的数量。该值是\[0,1\]范围内的百分比
+
+默认值：0.5
+
+```
+view3D.camera.percentageChanged = 0.01;
+```
+
 
 
