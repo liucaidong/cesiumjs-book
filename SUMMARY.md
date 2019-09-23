@@ -41,6 +41,7 @@
   * [Primitive\(几何体\)](primitiveji-he-4f5329.md)
     * [GeometryInstance\(几何实例\)](geometryinstance.md)
     * [primitive实例](primitiveshi-li.md)
+    * [ClassificationPrimitive](classificationprimitive.md)
   * [layers\(图层\)](layers.md)
     * [三维模型\(Entity&Primitive\)](san-wei-mo-578b28-entity-and-primitive.md)
     * [影像服务&地形服务](ying-xiang-fu-52a126-di-xing-fu-wu.md)
