@@ -16,6 +16,7 @@
   * [PositionProperty\(坐标\)](gai-nian/positionpropertyzuo-680729.md)
     * [SampledPositionProperty](gai-nian/positionpropertyzuo-680729/sampledpositionproperty.md)
   * [event\(事件\)](gai-nian/event.md)
+  * [Geometry\(几何\)](gai-nian/geometryji-4f5529.md)
   * [其他](gai-nian/arctype.md)
     * [EllipsoidGeodesic](gai-nian/arctype/ellipsoidgeodesic.md)
     * [JulianDate](gai-nian/arctype/juliandate.md)
