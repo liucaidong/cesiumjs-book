@@ -14,6 +14,7 @@
   * [math\(数学函数\)](gai-nian/math.md)
   * [color\(颜色\)](gai-nian/coloryan-827229.md)
   * [PositionProperty\(坐标\)](gai-nian/positionpropertyzuo-680729.md)
+    * [SampledPositionProperty](gai-nian/positionpropertyzuo-680729/sampledpositionproperty.md)
   * [其他](gai-nian/arctype.md)
     * [EllipsoidGeodesic](gai-nian/arctype/ellipsoidgeodesic.md)
     * [JulianDate](gai-nian/arctype/juliandate.md)
