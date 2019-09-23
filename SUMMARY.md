@@ -13,10 +13,12 @@
     * ClockViewModel
   * [math\(数学函数\)](gai-nian/math.md)
   * [color\(颜色\)](gai-nian/coloryan-827229.md)
+  * [PositionProperty\(坐标\)](gai-nian/positionpropertyzuo-680729.md)
   * [其他](gai-nian/arctype.md)
     * [EllipsoidGeodesic](gai-nian/arctype/ellipsoidgeodesic.md)
     * [JulianDate](gai-nian/arctype/juliandate.md)
     * [PinBuilder](gai-nian/arctype/pinbuilder.md)
+    * globe\(渲染地球\)
 * [基础](ji-chu-pian.md)
   * [camere\(相机\)](camere.md)
     * [pickEllipsoid](camere/pickellipsoid.md)
