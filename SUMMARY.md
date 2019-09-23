@@ -13,7 +13,7 @@
     * [JulianDate](gai-nian/arctype/juliandate.md)
     * [PinBuilder](gai-nian/arctype/pinbuilder.md)
   * [ParticleSystem\(粒子系统\)](gai-nian/particlesystemli-zi-xi-7edf29.md)
-  * clock\(时钟\)
+  * [clock\(时钟\)](gai-nian/clockshi-949f29.md)
 * [基础](ji-chu-pian.md)
   * [影像服务&地形服务](ying-xiang-fu-52a126-di-xing-fu-wu.md)
   * [三维模型\(Entity&Primitive\)](san-wei-mo-578b28-entity-and-primitive.md)
